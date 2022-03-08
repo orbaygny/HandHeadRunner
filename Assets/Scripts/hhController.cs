@@ -24,6 +24,9 @@ public class hhController : MonoBehaviour
      float offset = 0;
 public float rotationAngle =0;
      float clampOffset;
+
+
+     public GameObject edible;
     
 
      //public Vector2 startPos;
@@ -115,7 +118,7 @@ public float rotationAngle =0;
          
          
 
-         if(startPos.x>touch.position.x && parent.position.x > -5f)
+         if(startPos.x>touch.position.x && parent.position.x > -4f)
          {
              parent.position -= new Vector3(10,0,0)*Time.deltaTime;
 
@@ -130,7 +133,7 @@ public float rotationAngle =0;
 
          }
 
-         if(startPos.x<touch.position.x && parent.position.x<5f)
+         if(startPos.x<touch.position.x && parent.position.x<4f)
          {  
              parent.position += new Vector3(10,0,0)*Time.deltaTime;
 
