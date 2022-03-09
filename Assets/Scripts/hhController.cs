@@ -16,13 +16,14 @@ public class hhController : MonoBehaviour
      public Animator anim;
      public Vector3 lastPos;
 
-     public Transform root,rotationPoint;
+     public Transform root,rotationPoint,rotationP_reset;
 
      public bool moveToLeft,moveToRight;
     public static bool rotateActive,resetCheck,verticalActive;
      float touchXDelta = 0;
      float offset = 0;
 public float rotationAngle =0;
+        float rotationAngle_reset = 0;
      float clampOffset;
 
 
@@ -73,21 +74,25 @@ public float rotationAngle =0;
   
     void ResetPos()
     {   
-         if(resetCheck )
+        if(resetCheck )
         {
             if( rotationAngle <1f && rotationAngle>-1f){rotationAngle =0; rotationPoint.rotation =Quaternion.Euler(rotationPoint.eulerAngles.x,0,0) ; resetCheck = false;}
          else if(rotationAngle>0f)
          {
-             rotationAngle -=50*Time.deltaTime;
-            rotationPoint.rotation =Quaternion.Euler(rotationPoint.eulerAngles.x,rotationAngle,0) ;
+           //  rotationAngle -=100*Time.deltaTime;
+           // rotationPoint.rotation =Quaternion.Euler(rotationPoint.eulerAngles.x,rotationAngle,0) ;
+
+           
          }
         else if(rotationAngle<0f)
          {
-             rotationAngle += 50*Time.deltaTime;
-             rotationPoint.rotation =Quaternion.Euler(rotationPoint.eulerAngles.x,rotationAngle,0) ;
+            // rotationAngle += 100*Time.deltaTime;
+            // rotationPoint.rotation =Quaternion.Euler(rotationPoint.eulerAngles.x,rotationAngle,0) ;
 
          }
         }
+
+        
     }
    
    public void Movement()
@@ -118,13 +123,13 @@ public float rotationAngle =0;
          
          
 
-         if(startPos.x>touch.position.x && parent.position.x > -4f)
+        /* if(startPos.x>touch.position.x && parent.position.x > -4f)
          {
-             parent.position -= new Vector3(10,0,0)*Time.deltaTime;
+             parent.position -= new Vector3(20,0,0)*Time.deltaTime;
 
              if(rotateActive && rotationAngle> -30)
              {  
-                 rotationAngle -=100*Time.deltaTime;
+                 rotationAngle -=200*Time.deltaTime;
                  rotationPoint.rotation =Quaternion.Euler(rotationPoint.eulerAngles.x,rotationAngle,0) ;
              }
          
@@ -135,18 +140,18 @@ public float rotationAngle =0;
 
          if(startPos.x<touch.position.x && parent.position.x<4f)
          {  
-             parent.position += new Vector3(10,0,0)*Time.deltaTime;
+             parent.position += new Vector3(20,0,0)*Time.deltaTime;
 
              if(rotateActive && rotationAngle<30)
              {  
-                 rotationAngle +=100*Time.deltaTime;
+                 rotationAngle +=200*Time.deltaTime;
                  rotationPoint.rotation =Quaternion.Euler(rotationPoint.eulerAngles.x,rotationAngle,0) ;
              }
             
              startPos = touch.position;
              lastPos = parent.position;
 
-         }
+         }*/
 
         
         
