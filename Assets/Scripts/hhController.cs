@@ -23,7 +23,7 @@ public class hhController : MonoBehaviour
      float touchXDelta = 0;
      float offset = 0;
 public float rotationAngle =0;
-        float rotationAngle_reset = 0;
+      public  float rotationAngle_reset = 0;
      float clampOffset;
 
 
@@ -35,7 +35,10 @@ public float rotationAngle =0;
      public Transform parent;
 
     //bool resetPos = false;
-     void Awake() { Instance = this;}
+     void Awake() { Instance = this;
+    
+     
+     }
     
     // Start is called before the first frame update
     void Start()
@@ -76,18 +79,37 @@ public float rotationAngle =0;
     {   
         if(resetCheck )
         {
-            if( rotationAngle <1f && rotationAngle>-1f){rotationAngle =0; rotationPoint.rotation =Quaternion.Euler(rotationPoint.eulerAngles.x,0,0) ; resetCheck = false;}
+            if( //rotationAngle <1f && rotationAngle>-1f
+            rotationAngle == rotationAngle_reset){rotationAngle =0; rotationAngle_reset =0; 
+            rotationPoint.rotation =Quaternion.Euler(rotationPoint.eulerAngles.x,0,0) ;
+            rotationP_reset.localRotation =Quaternion.Euler(rotationP_reset.eulerAngles.x,0,0); 
+            resetCheck = false;}
+        
          else if(rotationAngle>0f)
          {
-           //  rotationAngle -=100*Time.deltaTime;
-           // rotationPoint.rotation =Quaternion.Euler(rotationPoint.eulerAngles.x,rotationAngle,0) ;
+             if(rotationAngle_reset>-rotationAngle)
+             {
+                //rotationAngle -=100*Time.deltaTime;
+            //rotationPoint.rotation =Quaternion.Euler(rotationPoint.eulerAngles.x,rotationAngle,0) ;
+            rotationAngle_reset -=100*Time.deltaTime;
+            rotationP_reset.localRotation =Quaternion.Euler(rotationP_reset.eulerAngles.x,rotationAngle_reset,0) ;
+             }
+             
 
            
          }
         else if(rotationAngle<0f)
          {
-            // rotationAngle += 100*Time.deltaTime;
+             //rotationAngle += 100*Time.deltaTime;
             // rotationPoint.rotation =Quaternion.Euler(rotationPoint.eulerAngles.x,rotationAngle,0) ;
+
+             if(rotationAngle_reset<-rotationAngle)
+             {
+                //rotationAngle -=100*Time.deltaTime;
+            //rotationPoint.rotation =Quaternion.Euler(rotationPoint.eulerAngles.x,rotationAngle,0) ;
+            rotationAngle_reset +=100*Time.deltaTime;
+            rotationP_reset.localRotation =Quaternion.Euler(rotationP_reset.eulerAngles.x,rotationAngle_reset,0) ;
+             }
 
          }
         }
@@ -123,11 +145,11 @@ public float rotationAngle =0;
          
          
 
-        /* if(startPos.x>touch.position.x && parent.position.x > -4f)
+         if(startPos.x>touch.position.x && parent.position.x > -4f)
          {
-             parent.position -= new Vector3(20,0,0)*Time.deltaTime;
+             //parent.position -= new Vector3(20,0,0)*Time.deltaTime;
 
-             if(rotateActive && rotationAngle> -30)
+             if(rotateActive && rotationAngle> -20)
              {  
                  rotationAngle -=200*Time.deltaTime;
                  rotationPoint.rotation =Quaternion.Euler(rotationPoint.eulerAngles.x,rotationAngle,0) ;
@@ -140,9 +162,9 @@ public float rotationAngle =0;
 
          if(startPos.x<touch.position.x && parent.position.x<4f)
          {  
-             parent.position += new Vector3(20,0,0)*Time.deltaTime;
+             //parent.position += new Vector3(20,0,0)*Time.deltaTime;
 
-             if(rotateActive && rotationAngle<30)
+             if(rotateActive && rotationAngle<20)
              {  
                  rotationAngle +=200*Time.deltaTime;
                  rotationPoint.rotation =Quaternion.Euler(rotationPoint.eulerAngles.x,rotationAngle,0) ;
@@ -151,7 +173,7 @@ public float rotationAngle =0;
              startPos = touch.position;
              lastPos = parent.position;
 
-         }*/
+         }
 
         
         
@@ -168,10 +190,13 @@ public float rotationAngle =0;
      
 }
 
-public void withRotation(){rotateActive = true; verticalActive = false; SceneManager.LoadScene(0);}
-public void Vertical(){rotateActive = false; verticalActive = true; SceneManager.LoadScene(0);}  
+public void withRotation(){rotateActive = true; TestVertical._vActive = false; SceneManager.LoadScene(0);}
+public void Vertical(){rotateActive = false; //verticalActive = true; 
+//parent.GetChild(2).gameObject.SetActive(true);
+gameObject.SetActive(false);
+SceneManager.LoadScene(0);}  
 
-public void wOutRotation(){rotateActive = false; verticalActive = false; SceneManager.LoadScene(0);}
+public void wOutRotation(){rotateActive = false; TestVertical._vActive = false; SceneManager.LoadScene(0);}
 
 
     

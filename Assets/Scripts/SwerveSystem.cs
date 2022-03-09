@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class SwerveSystem : MonoBehaviour
 {
-    [SerializeField] private float swerveSpeed = 0.5f;
+   
     private float _lastFrameFingerPositionX;
     private float _moveFactorX;
-    public float MoveFactorX => _moveFactorX;
+   private float MoveFactorX => _moveFactorX;
 
-    public float speed = 0f;
     public bool isMoveForward = false;
     public bool isParent = false;
 
+    public float speed = 0f;
+
+     [SerializeField] private float swerveSpeed = 0.5f;
     public float swerveMinus;
     public float swervePlus;
 

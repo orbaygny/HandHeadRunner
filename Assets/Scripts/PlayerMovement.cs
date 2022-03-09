@@ -27,12 +27,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-            transform.Translate(0, 0, speed * Time.fixedDeltaTime);
-            float swerveAmount = Time.fixedDeltaTime * swerveSpeed * _swerveInputSystem.MoveFactorX;
+          //  transform.Translate(0, 0, speed * Time.fixedDeltaTime);
+            //float swerveAmount = Time.fixedDeltaTime * swerveSpeed * _swerveInputSystem.MoveFactorX;
             //swerveAmount = Mathf.Clamp(swerveAmount, -maxSwerveAmount, maxSwerveAmount);
-            transform.Translate(swerveAmount, 0, 0);
-            float rotateAmount = Time.deltaTime * rotateSpeed * _swerveInputSystem.MoveFactorX;
-            rotateAmount = Mathf.Clamp(rotateAmount, -maxRotateAmount, maxRotateAmount);
+           // transform.Translate(swerveAmount, 0, 0);
+            //loat rotateAmount = Time.deltaTime * rotateSpeed * _swerveInputSystem.MoveFactorX;
+            //rotateAmount = Mathf.Clamp(rotateAmount, -maxRotateAmount, maxRotateAmount);
             //transform.Rotate(0, rotateAmount, 0);
 
     }
