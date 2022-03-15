@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TestVertical : MonoBehaviour
 {
-public static bool _vActive = false;
+public static bool _vActive = true;
 
 void Awake()
 {

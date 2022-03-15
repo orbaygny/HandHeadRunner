@@ -6,6 +6,14 @@ TagManager:
   tags:
   - Burger
   - Hand
+  - Pear
+  - Cupcake
+  - Foodpod
+  - Cake
+  - Chicken
+  - Mailbox
+  - Table
+  - Bookshelf
   layers:
   - Default
   - TransparentFX

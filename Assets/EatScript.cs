@@ -11,6 +11,12 @@ public class EatScript : StateMachineBehaviour
         {
             GameObject.Destroy(hhController.Instance.edible);
         }
+
+        if(EdibleManager.Instance.eatCount >= 10){
+            hhController.Instance.ScaleUp(); 
+            EdibleManager.Instance.ChangeEdible();
+            EdibleManager.Instance.eatCount -=10;
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

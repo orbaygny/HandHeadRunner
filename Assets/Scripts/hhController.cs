@@ -22,12 +22,18 @@ public class hhController : MonoBehaviour
     public static bool rotateActive,resetCheck,verticalActive;
      float touchXDelta = 0;
      float offset = 0;
-public float rotationAngle =0;
+    public float rotationAngle =0;
       public  float rotationAngle_reset = 0;
      float clampOffset;
 
+   
+
+    public Transform floor;
+
 
      public GameObject edible;
+
+     Vector3 camPos;
     
 
      //public Vector2 startPos;
@@ -35,14 +41,12 @@ public float rotationAngle =0;
      public Transform parent;
 
     //bool resetPos = false;
-     void Awake() { Instance = this;
-    
-     
-     }
+     void Awake() { Instance = this; }
     
     // Start is called before the first frame update
     void Start()
     {
+        Application.targetFrameRate = 60;
         DOTween.Init();
         anim = GetComponent<Animator>();
         if(verticalActive)
@@ -51,7 +55,14 @@ public float rotationAngle =0;
             transform.position = new Vector3(transform.position.x,transform.position.y,3.0f);
             Camera.main.GetComponent<CamScript>().offset.y=1;
             anim.SetBool("verticalActive",true);
+
+
         }
+
+        camPos = Camera.main.transform.localPosition;
+        camPos.x *=0.5f;
+        camPos.y *= 2;
+        camPos.z *= 0.5f;
     }
 
     // Update is called once per frame
@@ -63,6 +74,28 @@ public float rotationAngle =0;
         
     
     
+    }
+
+   public void ScaleUp()
+    {
+        float scaleTo = transform.lossyScale.x+1f;
+       /* transform.localScale = new Vector3(transform.localScale.x-0.2f,transform.localScale.y-0.2f,transform.localScale.z-0.2f);
+        transform.localScale = new Vector3(transform.localScale.x+0.4f,transform.localScale.y+0.4f,transform.localScale.z+0.4f);
+        transform.localScale = new Vector3(transform.localScale.x-0.1f,transform.localScale.y-0.1f,transform.localScale.z-0.1f);*/
+        transform.DOScale(scaleTo,1.2f).SetEase(Ease.OutBounce);
+        Camera.main.transform.DOLocalMove( Camera.main.transform.localPosition+camPos,1.5f); 
+        foreach(Transform child in floor)
+        {
+            child.DOScale(new Vector3(
+               child.localScale.x*2,
+                child.localScale.y,
+                child.localScale.z
+            ),0.75f).SetEase(Ease.Linear);
+        }
+       
+        gameObject.GetComponent<SwerveSystem>().swerveMinus *= 2;
+        gameObject.GetComponent<SwerveSystem>().swervePlus *= 2;
+
     }
 
     void LateUpdate()
@@ -197,6 +230,8 @@ gameObject.SetActive(false);
 SceneManager.LoadScene(0);}  
 
 public void wOutRotation(){rotateActive = false; TestVertical._vActive = false; SceneManager.LoadScene(0);}
+
+
 
 
     
