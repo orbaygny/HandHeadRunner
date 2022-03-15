@@ -14,6 +14,8 @@ public class EdibleManager : MonoBehaviour
     
     public int eatCount = 0;
 
+    int pp ;
+
    
     void Awake()
     {
@@ -44,36 +46,40 @@ public class EdibleManager : MonoBehaviour
 
     public  void ChangeEdible()
     {
+        pp=3;
         switch(scaleCount)
         {
             case 1:
-            int i = 3;
+            
             foreach(Transform placePoint in placePoints)
             {
-                placePoint.GetChild(i%3).gameObject.SetActive(true);
-                i++;
+                placePoint.GetChild(pp%3).gameObject.SetActive(true);
+                pp++;
             }
             scaleCount++;
             break;
 
             case 2:
-               i = 3;
+               
             foreach(Transform placePoint in placePoints)
             {
-                placePoint.GetChild(i%3).gameObject.SetActive(false);
-                placePoint.GetChild((i%3)+3).gameObject.SetActive(true);
-                i++;
+                placePoint.GetChild(pp%3).gameObject.SetActive(false);
+                placePoint.GetChild((pp%3)+3).gameObject.SetActive(true);
+                pp++;
             }
             scaleCount++;
             break;
 
             case 3:
-             i = 3;
+             
             foreach(Transform placePoint in placePoints)
             {
-                placePoint.GetChild((i%3)+3).gameObject.SetActive(false);
-                placePoint.GetChild((i%3)+6).gameObject.SetActive(true);
-                i++;
+               
+                placePoint.GetChild((pp%3)+3).gameObject.SetActive(false);
+               
+                placePoint.GetChild((pp%3)+6).gameObject.SetActive(true);
+               
+                pp++;
             }
             scaleCount++;
             break;
