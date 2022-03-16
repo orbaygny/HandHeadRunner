@@ -14,7 +14,7 @@ public class SwerveSystem : MonoBehaviour
 
     public float speed = 0f;
 
-     [SerializeField] private float swerveSpeed = 0.5f;
+     public float swerveSpeed = 0.5f;
     public float swerveMinus;
     public float swervePlus;
 

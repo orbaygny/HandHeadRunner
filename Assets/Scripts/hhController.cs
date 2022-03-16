@@ -87,14 +87,15 @@ public class hhController : MonoBehaviour
         foreach(Transform child in floor)
         {
             child.DOScale(new Vector3(
-               child.localScale.x*2,
+               child.localScale.x+(child.localScale.x*0.5f),
                 child.localScale.y,
                 child.localScale.z
             ),0.75f).SetEase(Ease.Linear);
         }
        
-        gameObject.GetComponent<SwerveSystem>().swerveMinus *= 2;
-        gameObject.GetComponent<SwerveSystem>().swervePlus *= 2;
+        gameObject.GetComponent<SwerveSystem>().swerveMinus +=gameObject.GetComponent<SwerveSystem>().swerveMinus * 0.5f;
+        gameObject.GetComponent<SwerveSystem>().swervePlus += gameObject.GetComponent<SwerveSystem>().swervePlus * 0.5f;
+        gameObject.GetComponent<SwerveSystem>().swerveSpeed += 0.5f;
 
     }
 
@@ -152,7 +153,7 @@ public class hhController : MonoBehaviour
    
    public void Movement()
 {   
-       parent.position += parent.forward*6*Time.deltaTime;
+       parent.position += parent.forward*9*Time.deltaTime;
     
        
    if (Input.touchCount > 0)
