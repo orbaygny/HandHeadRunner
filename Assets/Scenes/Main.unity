@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 4127632}
   - component: {fileID: 4127631}
   - component: {fileID: 4127630}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 37562896}
   - component: {fileID: 37562895}
   - component: {fileID: 37562894}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cupcake
   m_TagString: Cupcake
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 38038292}
   - component: {fileID: 38038291}
   - component: {fileID: 38038290}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Burger
   m_TagString: Burger
   m_Icon: {fileID: 0}
@@ -618,7 +618,7 @@ GameObject:
   - component: {fileID: 60170136}
   - component: {fileID: 60170135}
   - component: {fileID: 60170134}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pot of food
   m_TagString: Foodpod
   m_Icon: {fileID: 0}
@@ -763,7 +763,7 @@ GameObject:
   - component: {fileID: 69481578}
   - component: {fileID: 69481577}
   - component: {fileID: 69481576}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}
@@ -864,6 +864,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69481574}
   m_Mesh: {fileID: 798035055718525027, guid: a3eb873037c220d43a009e480927b73c, type: 3}
+--- !u!1 &72787198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 72787199}
+  m_Layer: 5
+  m_Name: InLevel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &72787199
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72787198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 456237827}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &79729083
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +913,7 @@ GameObject:
   - component: {fileID: 79729087}
   - component: {fileID: 79729086}
   - component: {fileID: 79729085}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MailBox
   m_TagString: Mailbox
   m_Icon: {fileID: 0}
@@ -991,7 +1027,7 @@ GameObject:
   - component: {fileID: 86259851}
   - component: {fileID: 86259850}
   - component: {fileID: 86259849}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pot of food
   m_TagString: Foodpod
   m_Icon: {fileID: 0}
@@ -1092,56 +1128,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86259847}
   m_Mesh: {fileID: 8990805245870774382, guid: 5d7b0c9d02ef6d8499ccadaf85368db4, type: 3}
---- !u!21 &87471431
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Override
-  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _DIRECTIONALL: 1
-    - _DirectionalIntensity: 1
-    - _DirectionalMode: 1
-    - _DirectionalModeBlend: 1
-    - _FOGG: 1
-    - _FogAxisMode: 2
-    - _FogDistanceEnd: 204.65
-    - _FogDistanceStart: 0
-    - _FogHeightEnd: -88.1
-    - _FogHeightStart: 65.55
-    - _FogIntensity: 1
-    - _HeightFogPreset: 1
-    - _IsHeightFogShader: 1
-    - _IsStandardPipeline: 0
-    - _NOISEE: 1
-    - _NoiseDistanceEnd: 30
-    - _NoiseIntensity: 1
-    - _NoiseMode: 2
-    - _NoiseModeBlend: 1
-    - _NoiseScale: 30
-    - _SKYBOXX: 1
-    - _SkyboxFogFill: 0
-    - _SkyboxFogHeight: 1
-    - _TITLE: 1
-    m_Colors:
-    - _DirectionalColor: {r: 1, g: 0.53189665, b: 0.25, a: 1}
-    - _FogColor: {r: 0, g: 0.5827589, b: 1, a: 1}
-    - _NoiseSpeed: {r: 0.5, g: 0.5, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &111459790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,7 +1255,7 @@ GameObject:
   - component: {fileID: 117322466}
   - component: {fileID: 117322465}
   - component: {fileID: 117322464}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookhelf
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
@@ -1383,7 +1369,7 @@ GameObject:
   - component: {fileID: 167462584}
   - component: {fileID: 167462583}
   - component: {fileID: 167462582}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cupcake
   m_TagString: Cupcake
   m_Icon: {fileID: 0}
@@ -1497,7 +1483,7 @@ GameObject:
   - component: {fileID: 176473735}
   - component: {fileID: 176473734}
   - component: {fileID: 176473733}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -1598,56 +1584,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176473731}
   m_Mesh: {fileID: -6692290496178104961, guid: 5d7b0c9d02ef6d8499ccadaf85368db4, type: 3}
---- !u!21 &183762570
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Blend
-  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _DIRECTIONALL: 1
-    - _DirectionalIntensity: 1
-    - _DirectionalMode: 1
-    - _DirectionalModeBlend: 1
-    - _FOGG: 1
-    - _FogAxisMode: 2
-    - _FogDistanceEnd: 204.65
-    - _FogDistanceStart: 0
-    - _FogHeightEnd: 0
-    - _FogHeightStart: 65.55
-    - _FogIntensity: 1
-    - _HeightFogPreset: 1
-    - _IsHeightFogShader: 1
-    - _IsStandardPipeline: 0
-    - _NOISEE: 1
-    - _NoiseDistanceEnd: 30
-    - _NoiseIntensity: 1
-    - _NoiseMode: 2
-    - _NoiseModeBlend: 1
-    - _NoiseScale: 30
-    - _SKYBOXX: 1
-    - _SkyboxFogFill: 0
-    - _SkyboxFogHeight: 1
-    - _TITLE: 1
-    m_Colors:
-    - _DirectionalColor: {r: 1, g: 0.53189665, b: 0.25, a: 1}
-    - _FogColor: {r: 0, g: 0.5827589, b: 1, a: 1}
-    - _NoiseSpeed: {r: 0.5, g: 0.5, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &190798526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,7 +1690,7 @@ GameObject:
   - component: {fileID: 190843812}
   - component: {fileID: 190843811}
   - component: {fileID: 190843810}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookhelf
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
@@ -1868,7 +1804,7 @@ GameObject:
   - component: {fileID: 214754100}
   - component: {fileID: 214754099}
   - component: {fileID: 214754098}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Burger
   m_TagString: Burger
   m_Icon: {fileID: 0}
@@ -1982,7 +1918,7 @@ GameObject:
   - component: {fileID: 216065188}
   - component: {fileID: 216065187}
   - component: {fileID: 216065186}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cake
   m_TagString: Cake
   m_Icon: {fileID: 0}
@@ -2096,7 +2032,7 @@ GameObject:
   - component: {fileID: 280414559}
   - component: {fileID: 280414558}
   - component: {fileID: 280414557}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -2210,7 +2146,7 @@ GameObject:
   - component: {fileID: 318130572}
   - component: {fileID: 318130571}
   - component: {fileID: 318130570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MailBox
   m_TagString: Mailbox
   m_Icon: {fileID: 0}
@@ -2344,7 +2280,7 @@ RectTransform:
   m_Children:
   - {fileID: 1080531280}
   m_Father: {fileID: 456237827}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2572,7 +2508,7 @@ GameObject:
   - component: {fileID: 336671993}
   - component: {fileID: 336671992}
   - component: {fileID: 336671991}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookhelf
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
@@ -2686,7 +2622,7 @@ GameObject:
   - component: {fileID: 347897162}
   - component: {fileID: 347897161}
   - component: {fileID: 347897160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MailBox
   m_TagString: Mailbox
   m_Icon: {fileID: 0}
@@ -2787,98 +2723,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347897158}
   m_Mesh: {fileID: -5495902117074765545, guid: 5d7b0c9d02ef6d8499ccadaf85368db4, type: 3}
---- !u!1 &347942534
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 347942537}
-  - component: {fileID: 347942536}
-  - component: {fileID: 347942535}
-  m_Layer: 0
-  m_Name: Height Fog Override
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &347942535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347942534}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac1c26670b7bd6a47ac695141473ab42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  styledBanner: 0
-  messageNoHeightFogGlobal: 0
-  categorySettings: 0
-  updateMode: 0
-  categoryVolume: 0
-  volumeDistanceFade: 15
-  volumeVisibility: 0.1
-  categoryFog: 0
-  fogPreset: {fileID: 0}
-  fogPresetOld: {fileID: 0}
-  messageInvalidPreset: 0
-  fogIntensity: 1
-  fogAxisMode: 2
-  fogColor: {r: 0, g: 0.58431375, b: 1, a: 1}
-  fogDistanceStart: 0
-  fogDistanceEnd: 6.07
-  fogHeightStart: 0
-  fogHeightEnd: 12
-  categotySkybox: 0
-  skyboxFogHeight: 1
-  skyboxFogFill: 0
-  categoryDirectional: 0
-  directionalMode: 1
-  directionalIntensity: 1
-  directionalColor: {r: 1, g: 0.53333336, b: 0.2509804, a: 1}
-  categoryNoise: 0
-  noiseMode: 3
-  noiseIntensity: 0.5
-  noiseDistanceEnd: 30
-  noiseScale: 30
-  noiseSpeed: {x: 0.5, y: 0.5, z: 0}
-  styledSpace0: 0
-  firstTime: 0
-  upgradedTo100: 1
---- !u!65 &347942536
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347942534}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &347942537
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347942534}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 20}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &348795712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,7 +2767,7 @@ GameObject:
   - component: {fileID: 354211681}
   - component: {fileID: 354211680}
   - component: {fileID: 354211679}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookhelf
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
@@ -3024,36 +2868,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354211677}
   m_Mesh: {fileID: -7544449973095271375, guid: 5d7b0c9d02ef6d8499ccadaf85368db4, type: 3}
---- !u!21 &380758317
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Height Fog Global
-  m_Shader: {fileID: 4800000, guid: 3a7ef1b66bafb7a448a880ef76d2e6e6, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3101
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _AlphaCutoff: 0.5
-    - _HeightFogGlobal: 1
-    - _IsHeightFogShader: 1
-    - _IsUniversalPipeline: 0
-    - _TITLE: 1
-    - _TransparentQueue: 3000
-    m_Colors:
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &392802521
 GameObject:
   m_ObjectHideFlags: 0
@@ -3202,7 +3016,7 @@ GameObject:
   - component: {fileID: 394643027}
   - component: {fileID: 394643026}
   - component: {fileID: 394643025}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookhelf
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
@@ -3334,6 +3148,56 @@ Transform:
   m_Father: {fileID: 782356575}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &444550689
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Override
+  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _DIRECTIONALL: 1
+    - _DirectionalIntensity: 1
+    - _DirectionalMode: 1
+    - _DirectionalModeBlend: 1
+    - _FOGG: 1
+    - _FogAxisMode: 1
+    - _FogDistanceEnd: -4.1
+    - _FogDistanceStart: 61.1
+    - _FogHeightEnd: -32.38
+    - _FogHeightStart: 84.38
+    - _FogIntensity: 1
+    - _HeightFogPreset: 1
+    - _IsHeightFogShader: 1
+    - _IsStandardPipeline: 0
+    - _NOISEE: 1
+    - _NoiseDistanceEnd: 60
+    - _NoiseIntensity: 1
+    - _NoiseMode: 0
+    - _NoiseModeBlend: 0
+    - _NoiseScale: 1
+    - _SKYBOXX: 1
+    - _SkyboxFogFill: 0
+    - _SkyboxFogHeight: 0.252
+    - _TITLE: 1
+    m_Colors:
+    - _DirectionalColor: {r: 0.9198113, g: 1, b: 0.99917233, a: 1}
+    - _FogColor: {r: 0.06132078, g: 0.52365506, b: 1, a: 1}
+    - _NoiseSpeed: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &447193622
 GameObject:
   m_ObjectHideFlags: 0
@@ -3347,7 +3211,7 @@ GameObject:
   - component: {fileID: 447193626}
   - component: {fileID: 447193625}
   - component: {fileID: 447193624}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MailBox
   m_TagString: Mailbox
   m_Icon: {fileID: 0}
@@ -3461,7 +3325,7 @@ GameObject:
   - component: {fileID: 449738606}
   - component: {fileID: 449738605}
   - component: {fileID: 449738604}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookhelf
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
@@ -3655,6 +3519,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1604667700}
+  - {fileID: 72787199}
   - {fileID: 1238972145}
   - {fileID: 1131908623}
   - {fileID: 320647865}
@@ -3676,7 +3542,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 456237823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aa9c46f8c3b83b44b5d217163eaa1e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 79c7ce1a496c24d4ab3c6d46acff70e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &458841496
@@ -3754,7 +3620,7 @@ GameObject:
   - component: {fileID: 462768855}
   - component: {fileID: 462768854}
   - component: {fileID: 462768853}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cake
   m_TagString: Cake
   m_Icon: {fileID: 0}
@@ -3983,7 +3849,7 @@ GameObject:
   - component: {fileID: 488539142}
   - component: {fileID: 488539141}
   - component: {fileID: 488539140}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pot of food
   m_TagString: Foodpod
   m_Icon: {fileID: 0}
@@ -4097,7 +3963,7 @@ GameObject:
   - component: {fileID: 489899309}
   - component: {fileID: 489899308}
   - component: {fileID: 489899307}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cupcake
   m_TagString: Cupcake
   m_Icon: {fileID: 0}
@@ -4198,6 +4064,82 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489899305}
   m_Mesh: {fileID: 7320373469446664815, guid: a3eb873037c220d43a009e480927b73c, type: 3}
+--- !u!1 &512132121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 512132122}
+  - component: {fileID: 512132124}
+  - component: {fileID: 512132123}
+  m_Layer: 5
+  m_Name: Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &512132122
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512132121}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1604667700}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &512132123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512132121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5372549, g: 0.8415806, b: 0.8415806, a: 0.30588236}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &512132124
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512132121}
+  m_CullTransparentMesh: 1
 --- !u!1 &514082580
 GameObject:
   m_ObjectHideFlags: 0
@@ -4211,7 +4153,7 @@ GameObject:
   - component: {fileID: 514082584}
   - component: {fileID: 514082583}
   - component: {fileID: 514082582}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -4325,7 +4267,7 @@ GameObject:
   - component: {fileID: 531515042}
   - component: {fileID: 531515041}
   - component: {fileID: 531515040}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pot of food
   m_TagString: Foodpod
   m_Icon: {fileID: 0}
@@ -4459,8 +4401,11 @@ MonoBehaviour:
   moveToRight: 0
   rotationAngle: 0
   rotationAngle_reset: 0
+  text: {fileID: 0}
+  textHeight: 2.5
   floor: {fileID: 0}
   edible: {fileID: 0}
+  gameStart: 0
   parent: {fileID: 758851223}
 --- !u!95 &541931646
 Animator:
@@ -4612,8 +4557,11 @@ MonoBehaviour:
   moveToRight: 0
   rotationAngle: 0
   rotationAngle_reset: 0
+  text: {fileID: 5088535766369658104, guid: 867c53e2592d829499dd89f377964ea3, type: 3}
+  textHeight: 2.5
   floor: {fileID: 1032670099085919130}
   edible: {fileID: 0}
+  gameStart: 0
   parent: {fileID: 758851223}
 --- !u!114 &543646031
 MonoBehaviour:
@@ -4667,7 +4615,7 @@ GameObject:
   - component: {fileID: 543751373}
   - component: {fileID: 543751372}
   - component: {fileID: 543751371}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}
@@ -4781,7 +4729,7 @@ GameObject:
   - component: {fileID: 544000657}
   - component: {fileID: 544000656}
   - component: {fileID: 544000655}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cake
   m_TagString: Cake
   m_Icon: {fileID: 0}
@@ -4895,7 +4843,7 @@ GameObject:
   - component: {fileID: 574466540}
   - component: {fileID: 574466539}
   - component: {fileID: 574466538}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -5057,6 +5005,178 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &589487609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 589487610}
+  - component: {fileID: 589487612}
+  - component: {fileID: 589487611}
+  m_Layer: 0
+  m_Name: EatingText (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &589487610
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589487609}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1.801}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1129904532}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.185, y: 3.04}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &589487611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589487609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: +1
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 9c69c036c90650f498744938622feb5e, type: 2}
+  m_sharedMaterial: {fileID: -1203051194783457906, guid: 9c69c036c90650f498744938622feb5e, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 7
+  m_fontSizeBase: 7
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 589487612}
+  m_maskType: 0
+--- !u!23 &589487612
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589487609}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -1203051194783457906, guid: 9c69c036c90650f498744938622feb5e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &625458794
 GameObject:
   m_ObjectHideFlags: 0
@@ -5163,7 +5283,7 @@ GameObject:
   - component: {fileID: 658013328}
   - component: {fileID: 658013327}
   - component: {fileID: 658013326}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pot of food
   m_TagString: Foodpod
   m_Icon: {fileID: 0}
@@ -5277,7 +5397,7 @@ GameObject:
   - component: {fileID: 661670409}
   - component: {fileID: 661670408}
   - component: {fileID: 661670407}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MailBox
   m_TagString: Mailbox
   m_Icon: {fileID: 0}
@@ -5598,7 +5718,7 @@ GameObject:
   - component: {fileID: 681273129}
   - component: {fileID: 681273128}
   - component: {fileID: 681273127}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cupcake
   m_TagString: Cupcake
   m_Icon: {fileID: 0}
@@ -5712,7 +5832,7 @@ GameObject:
   - component: {fileID: 696425614}
   - component: {fileID: 696425613}
   - component: {fileID: 696425612}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -5826,7 +5946,7 @@ GameObject:
   - component: {fileID: 699950775}
   - component: {fileID: 699950774}
   - component: {fileID: 699950773}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}
@@ -6013,7 +6133,7 @@ GameObject:
   - component: {fileID: 738145368}
   - component: {fileID: 738145367}
   - component: {fileID: 738145366}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookhelf
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
@@ -6127,7 +6247,7 @@ GameObject:
   - component: {fileID: 739309467}
   - component: {fileID: 739309466}
   - component: {fileID: 739309465}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -6403,6 +6523,7 @@ Transform:
   m_Children:
   - {fileID: 1693303784}
   - {fileID: 2054823639}
+  - {fileID: 1941057498}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6419,7 +6540,7 @@ GameObject:
   - component: {fileID: 765851489}
   - component: {fileID: 765851488}
   - component: {fileID: 765851487}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MailBox
   m_TagString: Mailbox
   m_Icon: {fileID: 0}
@@ -6533,7 +6654,7 @@ GameObject:
   - component: {fileID: 773448873}
   - component: {fileID: 773448872}
   - component: {fileID: 773448871}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pot of food
   m_TagString: Foodpod
   m_Icon: {fileID: 0}
@@ -6833,7 +6954,7 @@ GameObject:
   - component: {fileID: 798313477}
   - component: {fileID: 798313476}
   - component: {fileID: 798313475}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookhelf
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
@@ -6947,7 +7068,7 @@ GameObject:
   - component: {fileID: 799727297}
   - component: {fileID: 799727296}
   - component: {fileID: 799727295}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Burger
   m_TagString: Burger
   m_Icon: {fileID: 0}
@@ -7175,7 +7296,7 @@ GameObject:
   - component: {fileID: 814414612}
   - component: {fileID: 814414611}
   - component: {fileID: 814414610}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -7320,7 +7441,7 @@ GameObject:
   - component: {fileID: 852127039}
   - component: {fileID: 852127038}
   - component: {fileID: 852127037}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookhelf
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
@@ -7434,7 +7555,7 @@ GameObject:
   - component: {fileID: 860292671}
   - component: {fileID: 860292670}
   - component: {fileID: 860292669}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -7548,7 +7669,7 @@ GameObject:
   - component: {fileID: 860668562}
   - component: {fileID: 860668561}
   - component: {fileID: 860668560}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookhelf
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
@@ -7662,7 +7783,7 @@ GameObject:
   - component: {fileID: 875173131}
   - component: {fileID: 875173130}
   - component: {fileID: 875173129}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MailBox
   m_TagString: Mailbox
   m_Icon: {fileID: 0}
@@ -7776,7 +7897,7 @@ GameObject:
   - component: {fileID: 876191616}
   - component: {fileID: 876191615}
   - component: {fileID: 876191614}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MailBox
   m_TagString: Mailbox
   m_Icon: {fileID: 0}
@@ -7983,7 +8104,7 @@ GameObject:
   - component: {fileID: 883536855}
   - component: {fileID: 883536854}
   - component: {fileID: 883536853}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cake
   m_TagString: Cake
   m_Icon: {fileID: 0}
@@ -8211,7 +8332,7 @@ GameObject:
   - component: {fileID: 892874609}
   - component: {fileID: 892874608}
   - component: {fileID: 892874607}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cupcake
   m_TagString: Cupcake
   m_Icon: {fileID: 0}
@@ -8325,7 +8446,7 @@ GameObject:
   - component: {fileID: 918928528}
   - component: {fileID: 918928527}
   - component: {fileID: 918928526}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cupcake
   m_TagString: Cupcake
   m_Icon: {fileID: 0}
@@ -8439,7 +8560,7 @@ GameObject:
   - component: {fileID: 923243399}
   - component: {fileID: 923243398}
   - component: {fileID: 923243397}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}
@@ -8553,7 +8674,7 @@ GameObject:
   - component: {fileID: 932420362}
   - component: {fileID: 932420361}
   - component: {fileID: 932420360}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Burger
   m_TagString: Burger
   m_Icon: {fileID: 0}
@@ -8667,7 +8788,7 @@ GameObject:
   - component: {fileID: 936353985}
   - component: {fileID: 936353984}
   - component: {fileID: 936353983}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Burger
   m_TagString: Burger
   m_Icon: {fileID: 0}
@@ -8781,7 +8902,7 @@ GameObject:
   - component: {fileID: 956790610}
   - component: {fileID: 956790609}
   - component: {fileID: 956790608}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -8882,137 +9003,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956790606}
   m_Mesh: {fileID: 1248039166958328286, guid: 5d7b0c9d02ef6d8499ccadaf85368db4, type: 3}
---- !u!1 &958951522
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 958951526}
-  - component: {fileID: 958951525}
-  - component: {fileID: 958951524}
-  - component: {fileID: 958951523}
-  m_Layer: 0
-  m_Name: Height Fog Global
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &958951523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958951522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8023d2ae1fcb2948a39527720c2087b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  styledBanner: 0
-  categoryUpdate: 0
-  updateMode: 0
-  categoryFog: 0
-  fogPreset: {fileID: 0}
-  fogPresetOld: {fileID: 0}
-  messageInvalidPreset: 0
-  fogIntensity: 1
-  fogAxisMode: 2
-  fogColor: {r: 0, g: 0.5827589, b: 1, a: 1}
-  fogDistanceStart: 0
-  fogDistanceEnd: 204.65
-  fogHeightStart: 65.55
-  fogHeightEnd: 0
-  categorySkybox: 0
-  skyboxFogHeight: 1
-  skyboxFogFill: 0
-  categoryDirectional: 0
-  directionalMode: 1
-  directionalIntensity: 1
-  directionalColor: {r: 1, g: 0.53189665, b: 0.25, a: 1}
-  categoryNoise: 0
-  noiseMode: 3
-  noiseIntensity: 1
-  noiseDistanceEnd: 30
-  noiseScale: 30
-  noiseSpeed: {x: 0.5, y: 0.5, z: 0}
-  styledSpace0: 0
-  heightFogMaterial: {fileID: 380758317}
-  blendMaterial: {fileID: 183762570}
-  localMaterial: {fileID: 1191730518}
-  overrideMaterial: {fileID: 87471431}
-  overrideCamToVolumeDistance: Infinity
-  overrideVolumeDistanceFade: 20
-  updater: 0
---- !u!23 &958951524
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958951522}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 380758317}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &958951525
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958951522}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &958951526
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958951522}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 11.91, z: -28}
-  m_LocalScale: {x: 999, y: 999, z: 999}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &964402575
 GameObject:
   m_ObjectHideFlags: 0
@@ -9119,7 +9109,7 @@ GameObject:
   - component: {fileID: 970615662}
   - component: {fileID: 970615661}
   - component: {fileID: 970615660}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -9233,7 +9223,7 @@ GameObject:
   - component: {fileID: 975483456}
   - component: {fileID: 975483455}
   - component: {fileID: 975483454}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -9347,7 +9337,7 @@ GameObject:
   - component: {fileID: 978122554}
   - component: {fileID: 978122553}
   - component: {fileID: 978122552}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MailBox
   m_TagString: Mailbox
   m_Icon: {fileID: 0}
@@ -9461,7 +9451,7 @@ GameObject:
   - component: {fileID: 985362590}
   - component: {fileID: 985362589}
   - component: {fileID: 985362588}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -9575,7 +9565,7 @@ GameObject:
   - component: {fileID: 991580818}
   - component: {fileID: 991580817}
   - component: {fileID: 991580816}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -9689,7 +9679,7 @@ GameObject:
   - component: {fileID: 1002228654}
   - component: {fileID: 1002228653}
   - component: {fileID: 1002228652}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cake
   m_TagString: Cake
   m_Icon: {fileID: 0}
@@ -9803,7 +9793,7 @@ GameObject:
   - component: {fileID: 1002729012}
   - component: {fileID: 1002729011}
   - component: {fileID: 1002729010}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cake
   m_TagString: Cake
   m_Icon: {fileID: 0}
@@ -9917,7 +9907,7 @@ GameObject:
   - component: {fileID: 1021165021}
   - component: {fileID: 1021165020}
   - component: {fileID: 1021165019}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}
@@ -10031,7 +10021,7 @@ GameObject:
   - component: {fileID: 1028973125}
   - component: {fileID: 1028973124}
   - component: {fileID: 1028973123}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -10145,7 +10135,7 @@ GameObject:
   - component: {fileID: 1040472413}
   - component: {fileID: 1040472412}
   - component: {fileID: 1040472411}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}
@@ -10259,7 +10249,7 @@ GameObject:
   - component: {fileID: 1047142793}
   - component: {fileID: 1047142792}
   - component: {fileID: 1047142791}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -10373,7 +10363,7 @@ GameObject:
   - component: {fileID: 1054930678}
   - component: {fileID: 1054930677}
   - component: {fileID: 1054930676}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cupcake
   m_TagString: Cupcake
   m_Icon: {fileID: 0}
@@ -10487,7 +10477,7 @@ GameObject:
   - component: {fileID: 1062995059}
   - component: {fileID: 1062995058}
   - component: {fileID: 1062995057}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -11078,7 +11068,7 @@ GameObject:
   - component: {fileID: 1081869790}
   - component: {fileID: 1081869789}
   - component: {fileID: 1081869788}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MailBox
   m_TagString: Mailbox
   m_Icon: {fileID: 0}
@@ -11179,6 +11169,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081869786}
   m_Mesh: {fileID: -5495902117074765545, guid: 5d7b0c9d02ef6d8499ccadaf85368db4, type: 3}
+--- !u!1 &1129904531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1129904532}
+  m_Layer: 0
+  m_Name: TEXTS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1129904532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129904531}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.36, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1631533609}
+  - {fileID: 589487610}
+  m_Father: {fileID: 543646027}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1131908622
 GameObject:
   m_ObjectHideFlags: 0
@@ -11212,7 +11235,7 @@ RectTransform:
   m_Children:
   - {fileID: 2043030856}
   m_Father: {fileID: 456237827}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11326,7 +11349,7 @@ GameObject:
   - component: {fileID: 1148030625}
   - component: {fileID: 1148030624}
   - component: {fileID: 1148030623}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cake
   m_TagString: Cake
   m_Icon: {fileID: 0}
@@ -11427,6 +11450,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148030621}
   m_Mesh: {fileID: 2047228424725224544, guid: 5d7b0c9d02ef6d8499ccadaf85368db4, type: 3}
+--- !u!21 &1164868325
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Height Fog Global
+  m_Shader: {fileID: 4800000, guid: 3a7ef1b66bafb7a448a880ef76d2e6e6, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3101
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _HeightFogGlobal: 1
+    - _IsHeightFogShader: 1
+    - _IsUniversalPipeline: 0
+    - _TITLE: 1
+    - _TransparentQueue: 3000
+    m_Colors:
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &1169399999
 GameObject:
   m_ObjectHideFlags: 0
@@ -11440,7 +11493,7 @@ GameObject:
   - component: {fileID: 1169400003}
   - component: {fileID: 1169400002}
   - component: {fileID: 1169400001}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -11792,7 +11845,7 @@ GameObject:
   - component: {fileID: 1190773943}
   - component: {fileID: 1190773942}
   - component: {fileID: 1190773941}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cupcake
   m_TagString: Cupcake
   m_Icon: {fileID: 0}
@@ -11893,56 +11946,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190773939}
   m_Mesh: {fileID: 7320373469446664815, guid: a3eb873037c220d43a009e480927b73c, type: 3}
---- !u!21 &1191730518
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Local
-  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _DIRECTIONALL: 1
-    - _DirectionalIntensity: 1
-    - _DirectionalMode: 1
-    - _DirectionalModeBlend: 1
-    - _FOGG: 1
-    - _FogAxisMode: 2
-    - _FogDistanceEnd: 204.65
-    - _FogDistanceStart: 0
-    - _FogHeightEnd: 0
-    - _FogHeightStart: 65.55
-    - _FogIntensity: 1
-    - _HeightFogPreset: 1
-    - _IsHeightFogShader: 1
-    - _IsStandardPipeline: 0
-    - _NOISEE: 1
-    - _NoiseDistanceEnd: 30
-    - _NoiseIntensity: 1
-    - _NoiseMode: 2
-    - _NoiseModeBlend: 1
-    - _NoiseScale: 30
-    - _SKYBOXX: 1
-    - _SkyboxFogFill: 0
-    - _SkyboxFogHeight: 1
-    - _TITLE: 1
-    m_Colors:
-    - _DirectionalColor: {r: 1, g: 0.53189665, b: 0.25, a: 1}
-    - _FogColor: {r: 0, g: 0.5827589, b: 1, a: 1}
-    - _NoiseSpeed: {r: 0.5, g: 0.5, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &1199392173
 GameObject:
   m_ObjectHideFlags: 0
@@ -11956,7 +11959,7 @@ GameObject:
   - component: {fileID: 1199392177}
   - component: {fileID: 1199392176}
   - component: {fileID: 1199392175}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -12184,7 +12187,7 @@ GameObject:
   - component: {fileID: 1203631726}
   - component: {fileID: 1203631725}
   - component: {fileID: 1203631724}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MailBox
   m_TagString: Mailbox
   m_Icon: {fileID: 0}
@@ -12298,7 +12301,7 @@ GameObject:
   - component: {fileID: 1205655958}
   - component: {fileID: 1205655957}
   - component: {fileID: 1205655956}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Burger
   m_TagString: Burger
   m_Icon: {fileID: 0}
@@ -12412,7 +12415,7 @@ GameObject:
   - component: {fileID: 1225482800}
   - component: {fileID: 1225482799}
   - component: {fileID: 1225482798}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pot of food
   m_TagString: Foodpod
   m_Icon: {fileID: 0}
@@ -12526,7 +12529,7 @@ GameObject:
   - component: {fileID: 1230451712}
   - component: {fileID: 1230451711}
   - component: {fileID: 1230451710}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Burger
   m_TagString: Burger
   m_Icon: {fileID: 0}
@@ -12693,7 +12696,7 @@ RectTransform:
   m_Children:
   - {fileID: 1067899599}
   m_Father: {fileID: 456237827}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12807,7 +12810,7 @@ GameObject:
   - component: {fileID: 1265981449}
   - component: {fileID: 1265981448}
   - component: {fileID: 1265981447}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cupcake
   m_TagString: Cupcake
   m_Icon: {fileID: 0}
@@ -12921,7 +12924,7 @@ GameObject:
   - component: {fileID: 1266881066}
   - component: {fileID: 1266881065}
   - component: {fileID: 1266881064}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Burger
   m_TagString: Burger
   m_Icon: {fileID: 0}
@@ -13035,7 +13038,7 @@ GameObject:
   - component: {fileID: 1270371716}
   - component: {fileID: 1270371715}
   - component: {fileID: 1270371714}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pot of food
   m_TagString: Foodpod
   m_Icon: {fileID: 0}
@@ -13149,7 +13152,7 @@ GameObject:
   - component: {fileID: 1275697898}
   - component: {fileID: 1275697897}
   - component: {fileID: 1275697896}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cake
   m_TagString: Cake
   m_Icon: {fileID: 0}
@@ -13377,7 +13380,7 @@ GameObject:
   - component: {fileID: 1283049237}
   - component: {fileID: 1283049236}
   - component: {fileID: 1283049235}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookhelf
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
@@ -13491,7 +13494,7 @@ GameObject:
   - component: {fileID: 1286315268}
   - component: {fileID: 1286315267}
   - component: {fileID: 1286315266}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cake
   m_TagString: Cake
   m_Icon: {fileID: 0}
@@ -13681,7 +13684,7 @@ GameObject:
   - component: {fileID: 1287959970}
   - component: {fileID: 1287959969}
   - component: {fileID: 1287959968}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}
@@ -14156,7 +14159,7 @@ GameObject:
   - component: {fileID: 1344389158}
   - component: {fileID: 1344389157}
   - component: {fileID: 1344389156}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pot of food
   m_TagString: Foodpod
   m_Icon: {fileID: 0}
@@ -14270,7 +14273,7 @@ GameObject:
   - component: {fileID: 1357971230}
   - component: {fileID: 1357971229}
   - component: {fileID: 1357971228}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -14384,7 +14387,7 @@ GameObject:
   - component: {fileID: 1373248854}
   - component: {fileID: 1373248853}
   - component: {fileID: 1373248852}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookhelf
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
@@ -14498,7 +14501,7 @@ GameObject:
   - component: {fileID: 1374260902}
   - component: {fileID: 1374260901}
   - component: {fileID: 1374260900}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}
@@ -14612,7 +14615,7 @@ GameObject:
   - component: {fileID: 1374716739}
   - component: {fileID: 1374716738}
   - component: {fileID: 1374716737}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}
@@ -14726,7 +14729,7 @@ GameObject:
   - component: {fileID: 1395078532}
   - component: {fileID: 1395078531}
   - component: {fileID: 1395078530}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cake
   m_TagString: Cake
   m_Icon: {fileID: 0}
@@ -14840,7 +14843,7 @@ GameObject:
   - component: {fileID: 1411776158}
   - component: {fileID: 1411776157}
   - component: {fileID: 1411776156}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -14954,7 +14957,7 @@ GameObject:
   - component: {fileID: 1423299844}
   - component: {fileID: 1423299843}
   - component: {fileID: 1423299842}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookhelf
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
@@ -15068,7 +15071,7 @@ GameObject:
   - component: {fileID: 1426084933}
   - component: {fileID: 1426084932}
   - component: {fileID: 1426084931}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cake
   m_TagString: Cake
   m_Icon: {fileID: 0}
@@ -15182,7 +15185,7 @@ GameObject:
   - component: {fileID: 1429410235}
   - component: {fileID: 1429410234}
   - component: {fileID: 1429410233}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cake
   m_TagString: Cake
   m_Icon: {fileID: 0}
@@ -15327,7 +15330,7 @@ GameObject:
   - component: {fileID: 1442117566}
   - component: {fileID: 1442117565}
   - component: {fileID: 1442117564}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MailBox
   m_TagString: Mailbox
   m_Icon: {fileID: 0}
@@ -15745,6 +15748,56 @@ RectTransform:
   m_AnchoredPosition: {x: -16.205666, y: 3.3516707}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!21 &1489549515
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Local
+  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _DIRECTIONALL: 1
+    - _DirectionalIntensity: 1
+    - _DirectionalMode: 1
+    - _DirectionalModeBlend: 1
+    - _FOGG: 1
+    - _FogAxisMode: 1
+    - _FogDistanceEnd: -4.1
+    - _FogDistanceStart: 61.1
+    - _FogHeightEnd: -32.38
+    - _FogHeightStart: 84.38
+    - _FogIntensity: 1
+    - _HeightFogPreset: 1
+    - _IsHeightFogShader: 1
+    - _IsStandardPipeline: 0
+    - _NOISEE: 1
+    - _NoiseDistanceEnd: 60
+    - _NoiseIntensity: 1
+    - _NoiseMode: 0
+    - _NoiseModeBlend: 0
+    - _NoiseScale: 1
+    - _SKYBOXX: 1
+    - _SkyboxFogFill: 0
+    - _SkyboxFogHeight: 0.252
+    - _TITLE: 1
+    m_Colors:
+    - _DirectionalColor: {r: 0.9198113, g: 1, b: 0.99917233, a: 1}
+    - _FogColor: {r: 0.06132078, g: 0.52365506, b: 1, a: 1}
+    - _NoiseSpeed: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1504113724
 GameObject:
   m_ObjectHideFlags: 0
@@ -15758,7 +15811,7 @@ GameObject:
   - component: {fileID: 1504113728}
   - component: {fileID: 1504113727}
   - component: {fileID: 1504113726}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Burger
   m_TagString: Burger
   m_Icon: {fileID: 0}
@@ -15984,7 +16037,7 @@ RectTransform:
   - {fileID: 1688206426}
   - {fileID: 1595042926}
   m_Father: {fileID: 456237827}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16101,7 +16154,7 @@ GameObject:
   - component: {fileID: 1532020693}
   - component: {fileID: 1532020692}
   - component: {fileID: 1532020691}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}
@@ -16215,7 +16268,7 @@ GameObject:
   - component: {fileID: 1570584924}
   - component: {fileID: 1570584923}
   - component: {fileID: 1570584922}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}
@@ -16329,7 +16382,7 @@ GameObject:
   - component: {fileID: 1573078699}
   - component: {fileID: 1573078698}
   - component: {fileID: 1573078697}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Burger
   m_TagString: Burger
   m_Icon: {fileID: 0}
@@ -16505,7 +16558,7 @@ GameObject:
   - component: {fileID: 1588669119}
   - component: {fileID: 1588669118}
   - component: {fileID: 1588669117}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pot of food
   m_TagString: Foodpod
   m_Icon: {fileID: 0}
@@ -16619,7 +16672,7 @@ GameObject:
   - component: {fileID: 1593697800}
   - component: {fileID: 1593697799}
   - component: {fileID: 1593697798}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pot of food
   m_TagString: Foodpod
   m_Icon: {fileID: 0}
@@ -16804,7 +16857,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 456237828}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: canvasScript, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
@@ -16854,6 +16907,216 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595042925}
   m_CullTransparentMesh: 1
+--- !u!1 &1604667699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1604667700}
+  m_Layer: 5
+  m_Name: LevelStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1604667700
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604667699}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 512132122}
+  - {fileID: 1660175970}
+  m_Father: {fileID: 456237827}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1631533608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1631533609}
+  - component: {fileID: 1631533611}
+  - component: {fileID: 1631533610}
+  m_Layer: 0
+  m_Name: EatingText (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1631533609
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631533608}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1129904532}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.3, y: 1.619}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1631533610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631533608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: +1
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 9c69c036c90650f498744938622feb5e, type: 2}
+  m_sharedMaterial: {fileID: -1203051194783457906, guid: 9c69c036c90650f498744938622feb5e, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 7
+  m_fontSizeBase: 7
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1631533611}
+  m_maskType: 0
+--- !u!23 &1631533611
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631533608}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -1203051194783457906, guid: 9c69c036c90650f498744938622feb5e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1633075542
 GameObject:
   m_ObjectHideFlags: 0
@@ -16867,7 +17130,7 @@ GameObject:
   - component: {fileID: 1633075546}
   - component: {fileID: 1633075545}
   - component: {fileID: 1633075544}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Burger
   m_TagString: Burger
   m_Icon: {fileID: 0}
@@ -16981,7 +17244,7 @@ GameObject:
   - component: {fileID: 1636268421}
   - component: {fileID: 1636268420}
   - component: {fileID: 1636268419}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -17095,7 +17358,7 @@ GameObject:
   - component: {fileID: 1638790705}
   - component: {fileID: 1638790704}
   - component: {fileID: 1638790703}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pot of food
   m_TagString: Foodpod
   m_Icon: {fileID: 0}
@@ -17229,8 +17492,11 @@ MonoBehaviour:
   moveToRight: 0
   rotationAngle: 0
   rotationAngle_reset: 0
+  text: {fileID: 0}
+  textHeight: 2.5
   floor: {fileID: 0}
   edible: {fileID: 0}
+  gameStart: 0
   parent: {fileID: 758851223}
 --- !u!114 &1652753867
 MonoBehaviour:
@@ -17280,7 +17546,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 63739869d27218c42873cc558727f0c4, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63739869d27218c42873cc558727f0c4, type: 3}
       propertyPath: m_LocalScale.x
@@ -17364,6 +17630,141 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63739869d27218c42873cc558727f0c4, type: 3}
+--- !u!1 &1660175969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1660175970}
+  - component: {fileID: 1660175972}
+  - component: {fileID: 1660175971}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1660175970
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660175969}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1604667700}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: -642}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1660175971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660175969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Tap to Start
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 1c16e81ad79bb31448399d5c3926dae8, type: 2}
+  m_sharedMaterial: {fileID: -8751512581994472346, guid: 1c16e81ad79bb31448399d5c3926dae8, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 100
+  m_fontSizeBase: 100
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1660175972
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660175969}
+  m_CullTransparentMesh: 1
 --- !u!1 &1681109147
 GameObject:
   m_ObjectHideFlags: 0
@@ -17658,7 +18059,7 @@ GameObject:
   - component: {fileID: 1720405873}
   - component: {fileID: 1720405872}
   - component: {fileID: 1720405871}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pot of food
   m_TagString: Foodpod
   m_Icon: {fileID: 0}
@@ -17839,7 +18240,7 @@ GameObject:
   - component: {fileID: 1735434448}
   - component: {fileID: 1735434447}
   - component: {fileID: 1735434446}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cupcake
   m_TagString: Cupcake
   m_Icon: {fileID: 0}
@@ -18159,7 +18560,7 @@ GameObject:
   - component: {fileID: 1755695285}
   - component: {fileID: 1755695284}
   - component: {fileID: 1755695283}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}
@@ -18273,7 +18674,7 @@ GameObject:
   - component: {fileID: 1812655442}
   - component: {fileID: 1812655441}
   - component: {fileID: 1812655440}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -18387,7 +18788,7 @@ GameObject:
   - component: {fileID: 1839398814}
   - component: {fileID: 1839398813}
   - component: {fileID: 1839398812}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -18501,7 +18902,7 @@ GameObject:
   - component: {fileID: 1844499794}
   - component: {fileID: 1844499793}
   - component: {fileID: 1844499792}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -18615,7 +19016,7 @@ GameObject:
   - component: {fileID: 1847320077}
   - component: {fileID: 1847320076}
   - component: {fileID: 1847320075}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cupcake
   m_TagString: Cupcake
   m_Icon: {fileID: 0}
@@ -18716,6 +19117,137 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847320073}
   m_Mesh: {fileID: 7320373469446664815, guid: a3eb873037c220d43a009e480927b73c, type: 3}
+--- !u!1 &1862514476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1862514480}
+  - component: {fileID: 1862514479}
+  - component: {fileID: 1862514478}
+  - component: {fileID: 1862514477}
+  m_Layer: 0
+  m_Name: Height Fog Global
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1862514477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862514476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8023d2ae1fcb2948a39527720c2087b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styledBanner: 0
+  categoryUpdate: 0
+  updateMode: 0
+  categoryFog: 0
+  fogPreset: {fileID: 0}
+  fogPresetOld: {fileID: 0}
+  messageInvalidPreset: 0
+  fogIntensity: 1
+  fogAxisMode: 1
+  fogColor: {r: 0.06132078, g: 0.52365506, b: 1, a: 1}
+  fogDistanceStart: 61.1
+  fogDistanceEnd: -4.1
+  fogHeightStart: 84.38
+  fogHeightEnd: -32.38
+  categorySkybox: 0
+  skyboxFogHeight: 0.252
+  skyboxFogFill: 0
+  categoryDirectional: 0
+  directionalMode: 1
+  directionalIntensity: 1
+  directionalColor: {r: 0.9198113, g: 1, b: 0.99917233, a: 1}
+  categoryNoise: 0
+  noiseMode: 0
+  noiseIntensity: 1
+  noiseDistanceEnd: 60
+  noiseScale: 1
+  noiseSpeed: {x: 0, y: 0, z: 0}
+  styledSpace0: 0
+  heightFogMaterial: {fileID: 1164868325}
+  blendMaterial: {fileID: 1888699982}
+  localMaterial: {fileID: 1489549515}
+  overrideMaterial: {fileID: 444550689}
+  overrideCamToVolumeDistance: 1
+  overrideVolumeDistanceFade: 0
+  updater: 0
+--- !u!33 &1862514478
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862514476}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1862514479
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862514476}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 1164868325}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!4 &1862514480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862514476}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 11.91, z: -28}
+  m_LocalScale: {x: 999, y: 999, z: 999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1879420207
 GameObject:
   m_ObjectHideFlags: 0
@@ -18861,6 +19393,56 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881090547}
   m_Mesh: {fileID: 798035055718525027, guid: a3eb873037c220d43a009e480927b73c, type: 3}
+--- !u!21 &1888699982
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Blend
+  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _DIRECTIONALL: 1
+    - _DirectionalIntensity: 1
+    - _DirectionalMode: 1
+    - _DirectionalModeBlend: 1
+    - _FOGG: 1
+    - _FogAxisMode: 1
+    - _FogDistanceEnd: -4.1
+    - _FogDistanceStart: 61.1
+    - _FogHeightEnd: -32.38
+    - _FogHeightStart: 84.38
+    - _FogIntensity: 1
+    - _HeightFogPreset: 1
+    - _IsHeightFogShader: 1
+    - _IsStandardPipeline: 0
+    - _NOISEE: 1
+    - _NoiseDistanceEnd: 60
+    - _NoiseIntensity: 1
+    - _NoiseMode: 0
+    - _NoiseModeBlend: 0
+    - _NoiseScale: 1
+    - _SKYBOXX: 1
+    - _SkyboxFogFill: 0
+    - _SkyboxFogHeight: 0.252
+    - _TITLE: 1
+    m_Colors:
+    - _DirectionalColor: {r: 0.9198113, g: 1, b: 0.99917233, a: 1}
+    - _FogColor: {r: 0.06132078, g: 0.52365506, b: 1, a: 1}
+    - _NoiseSpeed: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1895144657
 GameObject:
   m_ObjectHideFlags: 0
@@ -18874,7 +19456,7 @@ GameObject:
   - component: {fileID: 1895144661}
   - component: {fileID: 1895144660}
   - component: {fileID: 1895144659}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}
@@ -18988,7 +19570,7 @@ GameObject:
   - component: {fileID: 1907438760}
   - component: {fileID: 1907438759}
   - component: {fileID: 1907438758}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}
@@ -19102,7 +19684,7 @@ GameObject:
   - component: {fileID: 1932608283}
   - component: {fileID: 1932608282}
   - component: {fileID: 1932608281}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cupcake
   m_TagString: Cupcake
   m_Icon: {fileID: 0}
@@ -19216,7 +19798,7 @@ GameObject:
   - component: {fileID: 1932824945}
   - component: {fileID: 1932824944}
   - component: {fileID: 1932824943}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MailBox
   m_TagString: Mailbox
   m_Icon: {fileID: 0}
@@ -19317,6 +19899,116 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932824941}
   m_Mesh: {fileID: -5495902117074765545, guid: 5d7b0c9d02ef6d8499ccadaf85368db4, type: 3}
+--- !u!1 &1941057497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1941057498}
+  - component: {fileID: 1941057502}
+  - component: {fileID: 1941057501}
+  - component: {fileID: 1941057500}
+  - component: {fileID: 1941057499}
+  m_Layer: 0
+  m_Name: Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1941057498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941057497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 47.6}
+  m_LocalScale: {x: 200, y: 10, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 758851223}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1941057499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941057497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021cfbcc59761a34cbaac37377ea31b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1941057500
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941057497}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1941057501
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941057497}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1941057502
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941057497}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1962443787
 GameObject:
   m_ObjectHideFlags: 0
@@ -19330,7 +20022,7 @@ GameObject:
   - component: {fileID: 1962443791}
   - component: {fileID: 1962443790}
   - component: {fileID: 1962443789}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -19444,7 +20136,7 @@ GameObject:
   - component: {fileID: 1975697005}
   - component: {fileID: 1975697004}
   - component: {fileID: 1975697003}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MailBox
   m_TagString: Mailbox
   m_Icon: {fileID: 0}
@@ -19672,7 +20364,7 @@ GameObject:
   - component: {fileID: 2006931138}
   - component: {fileID: 2006931137}
   - component: {fileID: 2006931136}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cupcake
   m_TagString: Cupcake
   m_Icon: {fileID: 0}
@@ -20045,7 +20737,7 @@ GameObject:
   - component: {fileID: 2044259176}
   - component: {fileID: 2044259175}
   - component: {fileID: 2044259174}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Burger
   m_TagString: Burger
   m_Icon: {fileID: 0}
@@ -20293,7 +20985,7 @@ GameObject:
   - component: {fileID: 2061626546}
   - component: {fileID: 2061626545}
   - component: {fileID: 2061626544}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -20407,7 +21099,7 @@ GameObject:
   - component: {fileID: 2077249073}
   - component: {fileID: 2077249072}
   - component: {fileID: 2077249071}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cake
   m_TagString: Cake
   m_Icon: {fileID: 0}
@@ -20521,7 +21213,7 @@ GameObject:
   - component: {fileID: 2084413948}
   - component: {fileID: 2084413947}
   - component: {fileID: 2084413946}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cake
   m_TagString: Cake
   m_Icon: {fileID: 0}
@@ -20666,7 +21358,7 @@ GameObject:
   - component: {fileID: 2100739339}
   - component: {fileID: 2100739338}
   - component: {fileID: 2100739337}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Burger
   m_TagString: Burger
   m_Icon: {fileID: 0}
@@ -20780,7 +21472,7 @@ GameObject:
   - component: {fileID: 2101145052}
   - component: {fileID: 2101145051}
   - component: {fileID: 2101145050}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookhelf
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
@@ -20894,7 +21586,7 @@ GameObject:
   - component: {fileID: 2119962220}
   - component: {fileID: 2119962219}
   - component: {fileID: 2119962218}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -21008,7 +21700,7 @@ GameObject:
   - component: {fileID: 2127400349}
   - component: {fileID: 2127400348}
   - component: {fileID: 2127400347}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Burger
   m_TagString: Burger
   m_Icon: {fileID: 0}
@@ -21122,7 +21814,7 @@ GameObject:
   - component: {fileID: 2128233064}
   - component: {fileID: 2128233063}
   - component: {fileID: 2128233062}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pot of food
   m_TagString: Foodpod
   m_Icon: {fileID: 0}
@@ -21236,7 +21928,7 @@ GameObject:
   - component: {fileID: 2129092190}
   - component: {fileID: 2129092189}
   - component: {fileID: 2129092188}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cupcake
   m_TagString: Cupcake
   m_Icon: {fileID: 0}
@@ -21401,7 +22093,8 @@ GameObject:
   - component: {fileID: 5294966608251500826}
   - component: {fileID: 5298028282908213717}
   - component: {fileID: 5298028282908213716}
-  m_Layer: 0
+  - component: {fileID: 5298028282908213718}
+  m_Layer: 6
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}
@@ -21614,7 +22307,8 @@ GameObject:
   - component: {fileID: 4539702729400474035}
   - component: {fileID: 5334037118191994222}
   - component: {fileID: 5334037118191994221}
-  m_Layer: 0
+  - component: {fileID: 5334037118191994223}
+  m_Layer: 6
   m_Name: MailBox
   m_TagString: Mailbox
   m_Icon: {fileID: 0}
@@ -21964,7 +22658,8 @@ GameObject:
   - component: {fileID: 4282675073784278978}
   - component: {fileID: 6115962170629884691}
   - component: {fileID: 6115962170629884690}
-  m_Layer: 0
+  - component: {fileID: 6115962170629884692}
+  m_Layer: 6
   m_Name: Burger
   m_TagString: Burger
   m_Icon: {fileID: 0}
@@ -22105,7 +22800,8 @@ GameObject:
   - component: {fileID: 8156673856035025972}
   - component: {fileID: 8156673856035025974}
   - component: {fileID: 8156673856035025973}
-  m_Layer: 0
+  - component: {fileID: 8156673856035025975}
+  m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -22156,7 +22852,8 @@ GameObject:
   - component: {fileID: 6114790827443471555}
   - component: {fileID: 6114790827443471557}
   - component: {fileID: 6114790827443471556}
-  m_Layer: 0
+  - component: {fileID: 6114790827443471558}
+  m_Layer: 6
   m_Name: pot of food
   m_TagString: Foodpod
   m_Icon: {fileID: 0}
@@ -22435,7 +23132,7 @@ Transform:
   - {fileID: 3963229363783912500}
   - {fileID: 3528519822085842717}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4189862135524890879
 Transform:
@@ -22798,6 +23495,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2316582, y: 2.040369, z: 1.2119987}
   m_Center: {x: -0.00038918853, y: 1.0353687, z: 0.0077088177}
+--- !u!114 &5298028282908213718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357731993038377127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002595e91f609a246845cbf8a32fd288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styledBanner: 0
+  messageNoRenderer: 0
+  messageMultiMaterials: 0
+  messageNoMaterial: 0
+  messageTransparencySupport: 1
+  categoryMaterial: 0
+  customFogMaterial: {fileID: 0}
+  messageInvalidFogMaterial: 0
+  styledSpace0: 0
 --- !u!33 &5334037118191994220
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22835,6 +23553,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5334037118191994223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832149485194460440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002595e91f609a246845cbf8a32fd288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styledBanner: 0
+  messageNoRenderer: 0
+  messageMultiMaterials: 0
+  messageNoMaterial: 0
+  messageTransparencySupport: 1
+  categoryMaterial: 0
+  customFogMaterial: {fileID: 0}
+  messageInvalidFogMaterial: 0
+  styledSpace0: 0
 --- !u!1 &5382398836692488591
 GameObject:
   m_ObjectHideFlags: 0
@@ -22908,7 +23647,8 @@ GameObject:
   - component: {fileID: 1700333630080903807}
   - component: {fileID: 8493958753448973139}
   - component: {fileID: 8493958753448973138}
-  m_Layer: 0
+  - component: {fileID: 8493958753448973140}
+  m_Layer: 6
   m_Name: Bookhelf
   m_TagString: Bookshelf
   m_Icon: {fileID: 0}
@@ -22961,7 +23701,8 @@ GameObject:
   - component: {fileID: 4158731013819202823}
   - component: {fileID: 5947703064032829721}
   - component: {fileID: 5947703064032829720}
-  m_Layer: 0
+  - component: {fileID: 5947703064032829722}
+  m_Layer: 6
   m_Name: Cupcake
   m_TagString: Cupcake
   m_Icon: {fileID: 0}
@@ -22997,6 +23738,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5947703064032829722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5947703064032829719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002595e91f609a246845cbf8a32fd288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styledBanner: 0
+  messageNoRenderer: 0
+  messageMultiMaterials: 0
+  messageNoMaterial: 0
+  messageTransparencySupport: 1
+  categoryMaterial: 0
+  customFogMaterial: {fileID: 0}
+  messageInvalidFogMaterial: 0
+  styledSpace0: 0
 --- !u!23 &6114790827443471555
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23068,6 +23830,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7057761, y: 0.81332856, z: 0.8686447}
   m_Center: {x: -1.516e-42, y: 0.41111317, z: 0.002064705}
+--- !u!114 &6114790827443471558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410427946140120553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002595e91f609a246845cbf8a32fd288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styledBanner: 0
+  messageNoRenderer: 0
+  messageMultiMaterials: 0
+  messageNoMaterial: 0
+  messageTransparencySupport: 1
+  categoryMaterial: 0
+  customFogMaterial: {fileID: 0}
+  messageInvalidFogMaterial: 0
+  styledSpace0: 0
 --- !u!4 &6115962170629884689
 Transform:
   m_ObjectHideFlags: 0
@@ -23112,6 +23895,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0121403, y: 1.1868068, z: 2.0718799}
   m_Center: {x: -0.05245176, y: 0.60343176, z: 0.0042772293}
+--- !u!114 &6115962170629884692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2440176178304916705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002595e91f609a246845cbf8a32fd288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styledBanner: 0
+  messageNoRenderer: 0
+  messageMultiMaterials: 0
+  messageNoMaterial: 0
+  messageTransparencySupport: 1
+  categoryMaterial: 0
+  customFogMaterial: {fileID: 0}
+  messageInvalidFogMaterial: 0
+  styledSpace0: 0
 --- !u!1 &6176506224622289596
 GameObject:
   m_ObjectHideFlags: 0
@@ -23587,6 +24391,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.44703984, y: 0.68748164, z: 0.35820866}
   m_Center: {x: 0.07087246, y: 0.35263622, z: -0.0023493767}
+--- !u!114 &8156673856035025975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3170345856972957951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002595e91f609a246845cbf8a32fd288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styledBanner: 0
+  messageNoRenderer: 0
+  messageMultiMaterials: 0
+  messageNoMaterial: 0
+  messageTransparencySupport: 1
+  categoryMaterial: 0
+  customFogMaterial: {fileID: 0}
+  messageInvalidFogMaterial: 0
+  styledSpace0: 0
 --- !u!33 &8238976796353236669
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -23640,6 +24465,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.60841495, y: 2.5060837, z: 2.0000005}
   m_Center: {x: -0.01953516, y: 1.2346271, z: 0.05061869}
+--- !u!114 &8493958753448973140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5474281848816147216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002595e91f609a246845cbf8a32fd288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styledBanner: 0
+  messageNoRenderer: 0
+  messageMultiMaterials: 0
+  messageNoMaterial: 0
+  messageTransparencySupport: 1
+  categoryMaterial: 0
+  customFogMaterial: {fileID: 0}
+  messageInvalidFogMaterial: 0
+  styledSpace0: 0
 --- !u!23 &8590913047830388104
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23763,7 +24609,8 @@ GameObject:
   - component: {fileID: 7094472419175611665}
   - component: {fileID: 8803235892118723750}
   - component: {fileID: 8803235892118723749}
-  m_Layer: 0
+  - component: {fileID: 8803235892118723751}
+  m_Layer: 6
   m_Name: Cake
   m_TagString: Cake
   m_Icon: {fileID: 0}
@@ -23799,6 +24646,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8803235892118723751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8803235892118723748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002595e91f609a246845cbf8a32fd288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styledBanner: 0
+  messageNoRenderer: 0
+  messageMultiMaterials: 0
+  messageNoMaterial: 0
+  messageTransparencySupport: 1
+  categoryMaterial: 0
+  customFogMaterial: {fileID: 0}
+  messageInvalidFogMaterial: 0
+  styledSpace0: 0
 --- !u!4 &8891792827150267698
 Transform:
   m_ObjectHideFlags: 0
@@ -23827,7 +24695,8 @@ GameObject:
   - component: {fileID: 4053793226961470516}
   - component: {fileID: 9152363912625673302}
   - component: {fileID: 9152363912625673301}
-  m_Layer: 0
+  - component: {fileID: 9152363912625673303}
+  m_Layer: 6
   m_Name: Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -23863,6 +24732,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &9152363912625673303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9152363912625673300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002595e91f609a246845cbf8a32fd288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styledBanner: 0
+  messageNoRenderer: 0
+  messageMultiMaterials: 0
+  messageNoMaterial: 0
+  messageTransparencySupport: 1
+  categoryMaterial: 0
+  customFogMaterial: {fileID: 0}
+  messageInvalidFogMaterial: 0
+  styledSpace0: 0
 --- !u!1 &9181669326494233751
 GameObject:
   m_ObjectHideFlags: 0

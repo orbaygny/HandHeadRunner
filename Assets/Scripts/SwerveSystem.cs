@@ -36,8 +36,10 @@ public class SwerveSystem : MonoBehaviour
         {
             _moveFactorX = 0f;
         }
+        if(hhController.Instance.gameStart){
         Movement();
         Swerve();
+        }
     }
 
 

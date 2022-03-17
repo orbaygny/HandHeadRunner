@@ -31,6 +31,13 @@ public class EdibleManager : MonoBehaviour
         {
             placeP.gameObject.GetComponent<MeshRenderer>().enabled = false;
         }
+
+        foreach(Transform placePoint in placePoints)
+        {
+            foreach(Transform child in placePoint){
+                child.transform.localScale *=0.5f;
+            }
+        }
        
     }
     void Start()

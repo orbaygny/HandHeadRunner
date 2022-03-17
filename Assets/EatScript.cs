@@ -10,6 +10,8 @@ public class EatScript : StateMachineBehaviour
         if(hhController.Instance.edible !=null)
         {
             GameObject.Destroy(hhController.Instance.edible);
+           hhController.Instance.EatTexter();
+            
         }
 
         if(EdibleManager.Instance.eatCount >= 10){

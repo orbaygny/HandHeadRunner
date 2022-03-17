@@ -26,14 +26,18 @@ public class hhController : MonoBehaviour
       public  float rotationAngle_reset = 0;
      float clampOffset;
 
-   
+     public Transform text;
+     public float  textHeight = 2.5f;
 
+    
     public Transform floor;
 
 
      public GameObject edible;
 
      Vector3 camPos;
+
+     public  bool gameStart;
     
 
      //public Vector2 startPos;
@@ -69,7 +73,7 @@ public class hhController : MonoBehaviour
     void Update()
     {
         
-        Movement();
+       if(gameStart){ Movement();}
        
         
     
@@ -96,6 +100,7 @@ public class hhController : MonoBehaviour
         gameObject.GetComponent<SwerveSystem>().swerveMinus +=gameObject.GetComponent<SwerveSystem>().swerveMinus * 0.5f;
         gameObject.GetComponent<SwerveSystem>().swervePlus += gameObject.GetComponent<SwerveSystem>().swervePlus * 0.5f;
         gameObject.GetComponent<SwerveSystem>().swerveSpeed += 0.5f;
+        textHeight+=2;
 
     }
 
@@ -232,8 +237,33 @@ SceneManager.LoadScene(0);}
 
 public void wOutRotation(){rotateActive = false; TestVertical._vActive = false; SceneManager.LoadScene(0);}
 
+public void EatTexter()
+{
+    float randomPos = Random.Range(-2,2);
+   Transform textTemp =  Instantiate(text,new Vector3(randomPos,textHeight,parent.position.z),Quaternion.identity,parent);
+    /*hhController.Instance.texts.GetChild
+    (hhController.Instance.textCount%3).gameObject.SetActive(true);
 
+    Transform text = hhController.Instance.texts.GetChild
+    (hhController.Instance.textCount%3);
+    Vector3 pos = text.transform.localPosition;
+    text.transform.DOMoveY(5,1f,false);
+    text.transform.DOScale(1.25f,1f);
+    StartCoroutine(TurnOffText(pos));*/
 
+    textTemp.transform.DOMoveY(textHeight+2,1f,false);
+    textTemp.transform.DOScale(1f,1f);
+    StartCoroutine(TurnOffText(textTemp));
+    
+    
+    
+}
 
+IEnumerator TurnOffText(Transform textTemp)
+{
+    yield return new WaitForSeconds(1.1f);
+    Destroy(textTemp.gameObject);
+
+}
     
 }
