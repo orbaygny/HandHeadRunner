@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CanvasScript : MonoBehaviour
 {
     // Start is called before the first frame update
+   public Slider eatSlider;
+    
     void Start()
     {
         
@@ -22,5 +26,11 @@ public class CanvasScript : MonoBehaviour
                  
              }
         }
+        eatSlider.value = EdibleManager.Instance.eatCount;
+         
+         
     }
+
+
+public void Restart(){ SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);}
 }

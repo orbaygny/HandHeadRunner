@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class EatScript : StateMachineBehaviour
 {
+
+    
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if(hhController.Instance.edible !=null)
         {
             GameObject.Destroy(hhController.Instance.edible);
-           hhController.Instance.EatTexter();
+           hhController.Instance.EatTexter(EatTrigger.lastEated);
             
         }
 
@@ -18,6 +22,7 @@ public class EatScript : StateMachineBehaviour
             hhController.Instance.ScaleUp(); 
             EdibleManager.Instance.ChangeEdible();
             EdibleManager.Instance.eatCount -=10;
+
         }
     }
 

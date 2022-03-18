@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class hhController : MonoBehaviour
 {
+    
     
 
      public static hhController Instance { get; private set; }
 
      private Vector2 startPos, endPos;
-     public float speed;
+     public float speed = 9;
      public bool walk = true;
      public Animator anim;
      public Vector3 lastPos;
@@ -31,6 +34,11 @@ public class hhController : MonoBehaviour
 
     
     public Transform floor;
+    public Transform arena;
+
+    public GameObject canvas;
+
+    
 
 
      public GameObject edible;
@@ -44,6 +52,10 @@ public class hhController : MonoBehaviour
 
      public Transform parent;
 
+     public Transform finalPlace;
+
+     public bool finishStart;
+
     //bool resetPos = false;
      void Awake() { Instance = this; }
     
@@ -51,6 +63,7 @@ public class hhController : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = 60;
+        speed = 9;
         DOTween.Init();
         anim = GetComponent<Animator>();
         if(verticalActive)
@@ -64,7 +77,7 @@ public class hhController : MonoBehaviour
         }
 
         camPos = Camera.main.transform.localPosition;
-        camPos.x *=0.5f;
+        camPos.x *= 0.5f;
         camPos.y *= 2;
         camPos.z *= 0.5f;
     }
@@ -73,11 +86,10 @@ public class hhController : MonoBehaviour
     void Update()
     {
         
-       if(gameStart){ Movement();}
-       
-        
-    
-    
+       if(gameStart && !finishStart){ Movement();
+       }
+
+     
     }
 
    public void ScaleUp()
@@ -86,21 +98,35 @@ public class hhController : MonoBehaviour
        /* transform.localScale = new Vector3(transform.localScale.x-0.2f,transform.localScale.y-0.2f,transform.localScale.z-0.2f);
         transform.localScale = new Vector3(transform.localScale.x+0.4f,transform.localScale.y+0.4f,transform.localScale.z+0.4f);
         transform.localScale = new Vector3(transform.localScale.x-0.1f,transform.localScale.y-0.1f,transform.localScale.z-0.1f);*/
-        transform.DOScale(scaleTo,1.2f).SetEase(Ease.OutBounce);
+        rotationPoint.DOScale(scaleTo,1.2f).SetEase(Ease.OutBounce);
         Camera.main.transform.DOLocalMove( Camera.main.transform.localPosition+camPos,1.5f); 
-        foreach(Transform child in floor)
+        /*foreach(Transform child in floor)
         {
             child.DOScale(new Vector3(
                child.localScale.x+(child.localScale.x*0.5f),
                 child.localScale.y,
                 child.localScale.z
             ),0.75f).SetEase(Ease.Linear);
-        }
-       
+        }*/
+
+        floor.DOScale(new Vector3(
+               floor.localScale.x+(floor.localScale.x*0.5f),
+                floor.localScale.y,
+                floor.localScale.z
+            ),0.75f).SetEase(Ease.Linear);
+        arena.DOScale(new Vector3(
+               arena.localScale.x+(arena.localScale.x*0.5f),
+                arena.localScale.y,
+                arena.localScale.z+(arena.localScale.z*0.5f)
+            ),0.75f).SetEase(Ease.Linear);
+        
         gameObject.GetComponent<SwerveSystem>().swerveMinus +=gameObject.GetComponent<SwerveSystem>().swerveMinus * 0.5f;
         gameObject.GetComponent<SwerveSystem>().swervePlus += gameObject.GetComponent<SwerveSystem>().swervePlus * 0.5f;
         gameObject.GetComponent<SwerveSystem>().swerveSpeed += 0.5f;
         textHeight+=2;
+        speed +=9/2;
+
+        
 
     }
 
@@ -158,7 +184,7 @@ public class hhController : MonoBehaviour
    
    public void Movement()
 {   
-       parent.position += parent.forward*9*Time.deltaTime;
+       parent.position += parent.forward*speed*Time.deltaTime;
     
        
    if (Input.touchCount > 0)
@@ -237,7 +263,7 @@ SceneManager.LoadScene(0);}
 
 public void wOutRotation(){rotateActive = false; TestVertical._vActive = false; SceneManager.LoadScene(0);}
 
-public void EatTexter()
+public void EatTexter(int count)
 {
     float randomPos = Random.Range(-2,2);
    Transform textTemp =  Instantiate(text,new Vector3(randomPos,textHeight,parent.position.z),Quaternion.identity,parent);
@@ -250,7 +276,7 @@ public void EatTexter()
     text.transform.DOMoveY(5,1f,false);
     text.transform.DOScale(1.25f,1f);
     StartCoroutine(TurnOffText(pos));*/
-
+    textTemp.GetComponent<TextMeshPro>().text = "+"+count;
     textTemp.transform.DOMoveY(textHeight+2,1f,false);
     textTemp.transform.DOScale(1f,1f);
     StartCoroutine(TurnOffText(textTemp));
@@ -265,5 +291,27 @@ IEnumerator TurnOffText(Transform textTemp)
     Destroy(textTemp.gameObject);
 
 }
+
+public void FinishStart()
+{
+    transform.DOJump(new Vector3(
+                    hhController.Instance.finalPlace.position.x,
+                    hhController.Instance.transform.position.y,
+                    hhController.Instance.finalPlace.position.z),3,1,1);
+    Camera.main.transform.DOLocalMove(new Vector3(0,10.5f,22),1.5f);
+    Camera.main.transform.DOLocalRotateQuaternion(Quaternion.Euler(
+        Camera.main.transform.rotation.eulerAngles.x,
+        0,
+        Camera.main.transform.rotation.eulerAngles.z),1.5f);
+        StartCoroutine(CanvasOpen());
+}
+
+IEnumerator CanvasOpen()
+{
+    yield return new WaitForSeconds(1.6f);
     
+    canvas.transform.GetChild(4).gameObject.SetActive(true);
+    PlayerPrefs.SetInt("Level",
+        PlayerPrefs.GetInt("Level",1)+1);
+}
 }

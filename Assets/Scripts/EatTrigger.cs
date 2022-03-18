@@ -1,20 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class EatTrigger : MonoBehaviour
 {
-    public int eatCount = 0;
+    public static int lastEated = 0;
     public GameObject canvas;
     [SerializeField]
     private Transform placeHolder;
 
     private GameObject parentForDelete;
-   
+
+    
+    void Awake()
+    {
+        lastEated = 0;
+    }
 
      private void OnTriggerEnter(Collider other)
-    {
+    {   
 
        if(placeHolder.childCount == 0)
        {
@@ -26,8 +32,12 @@ public class EatTrigger : MonoBehaviour
             other.transform.localPosition = new Vector3(0.00476f,0.000456f,0);
             other.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
             hhController.Instance.edible = other.gameObject;
-            EdibleManager.Instance.eatCount +=2;
+            EdibleManager.Instance.eatCount +=1;
+            lastEated = 1;
             parentForDelete.SetActive(false);
+
+            hhController.Instance.walk = false;
+            hhController.Instance.anim.SetTrigger("Eat");
             break;
 
             case "Burger":
@@ -37,8 +47,12 @@ public class EatTrigger : MonoBehaviour
             other.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
             other.transform.localRotation = Quaternion.Euler(90,0,0);
             hhController.Instance.edible = other.gameObject;
-            EdibleManager.Instance.eatCount +=2;
+            EdibleManager.Instance.eatCount +=3;
+            lastEated = 3;
             parentForDelete.SetActive(false);
+
+            hhController.Instance.walk = false;
+            hhController.Instance.anim.SetTrigger("Eat");
             break;
 
             case "Cupcake":
@@ -48,7 +62,11 @@ public class EatTrigger : MonoBehaviour
             other.transform.localScale = new Vector3(0.75f,0.75f,0.75f);
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.eatCount +=2;
+           lastEated = 2;
             parentForDelete.SetActive(false);
+
+            hhController.Instance.walk = false;
+            hhController.Instance.anim.SetTrigger("Eat");
             break;
 
             case "Foodpod":
@@ -57,8 +75,12 @@ public class EatTrigger : MonoBehaviour
             other.transform.localPosition = new Vector3(-0.02f,-0.1f,0.04f);
             other.transform.localScale = new Vector3(1,1,1);
             hhController.Instance.edible = other.gameObject;
-            EdibleManager.Instance.eatCount +=2;
+            EdibleManager.Instance.eatCount +=3;
+            lastEated = 3;
             parentForDelete.SetActive(false);
+
+            hhController.Instance.walk = false;
+            hhController.Instance.anim.SetTrigger("Eat");
             break;
 
             case "Cake":
@@ -67,8 +89,12 @@ public class EatTrigger : MonoBehaviour
             other.transform.localPosition = new Vector3(-0.02f,0,0.04f);
             other.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
             hhController.Instance.edible = other.gameObject;
-            EdibleManager.Instance.eatCount +=2;
+            EdibleManager.Instance.eatCount +=1;
+            lastEated = 1;
             parentForDelete.SetActive(false);
+
+            hhController.Instance.walk = false;
+            hhController.Instance.anim.SetTrigger("Eat");
             break;
 
              case "Chicken":
@@ -78,7 +104,11 @@ public class EatTrigger : MonoBehaviour
             other.transform.localScale = new Vector3(1.5f,1.5f,1.5f);
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.eatCount +=2;
+            lastEated = 2;
             parentForDelete.SetActive(false);
+
+            hhController.Instance.walk = false;
+            hhController.Instance.anim.SetTrigger("Eat");
             break;
 
              case "Mailbox":
@@ -88,8 +118,12 @@ public class EatTrigger : MonoBehaviour
             other.transform.localScale = new Vector3(1f,1f,1f);
             other.transform.localRotation = Quaternion.Euler(180,202,90);
             hhController.Instance.edible = other.gameObject;
-            EdibleManager.Instance.eatCount +=2;
+            EdibleManager.Instance.eatCount +=1;
+            lastEated = 1;
             parentForDelete.SetActive(false);
+
+            hhController.Instance.walk = false;
+            hhController.Instance.anim.SetTrigger("Eat");
             break;
 
             case "Table":
@@ -99,7 +133,11 @@ public class EatTrigger : MonoBehaviour
             other.transform.localScale = new Vector3(0.75f,0.75f,0.75f);
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.eatCount +=2;
+            lastEated = 2;
             parentForDelete.SetActive(false);
+
+            hhController.Instance.walk = false;
+            hhController.Instance.anim.SetTrigger("Eat");
             break;
 
             case "Bookshelf":
@@ -108,14 +146,17 @@ public class EatTrigger : MonoBehaviour
             other.transform.localPosition = new Vector3(-0.3f,-0.15f,0.12f);
             other.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
             hhController.Instance.edible = other.gameObject;
-            EdibleManager.Instance.eatCount +=2;
+            EdibleManager.Instance.eatCount +=3;
+            lastEated = 3;
             parentForDelete.SetActive(false);
+
+            hhController.Instance.walk = false;
+            hhController.Instance.anim.SetTrigger("Eat");
             break;
             
         }
 
-        hhController.Instance.walk = false;
-        hhController.Instance.anim.SetTrigger("Eat");
+        
        // if(eatCount>=10){hhController.Instance.ScaleUp(); eatCount -=10;
        //               EdibleManager.Instance.ChangeEdible(); }
        }
@@ -146,7 +187,13 @@ public class EatTrigger : MonoBehaviour
 
         if(other.gameObject.tag == "Finish")
         {
-            canvas.transform.GetChild(3).gameObject.SetActive(true);
+            hhController.Instance.finishStart = true;
+           hhController.Instance.FinishStart();
+           hhController.Instance.anim.SetBool("gameStart",false);
+
+           
+
+            
         }
     }
 }

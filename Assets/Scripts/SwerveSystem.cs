@@ -18,11 +18,17 @@ public class SwerveSystem : MonoBehaviour
     public float swerveMinus;
     public float swervePlus;
 
+    public Vector3 x ;
+
 
     public Transform parentObject;
 
+
     private void Update()
     {
+        x = parentObject.transform.position;
+        x.x = Mathf.Clamp(x.x,swerveMinus,swervePlus);
+        parentObject.transform.position = x;
         if (Input.GetMouseButtonDown(0))
         {
             _lastFrameFingerPositionX = Input.mousePosition.x;
