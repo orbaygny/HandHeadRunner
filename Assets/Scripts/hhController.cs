@@ -5,6 +5,7 @@ using DG.Tweening;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using EZCameraShake;
 
 public class hhController : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class hhController : MonoBehaviour
      public static hhController Instance { get; private set; }
 
      private Vector2 startPos, endPos;
-     public float speed = 9;
+     public float speed = 15;
      public bool walk = true;
      public Animator anim;
      public Vector3 lastPos;
@@ -53,9 +54,34 @@ public class hhController : MonoBehaviour
      public Transform parent;
 
      public Transform finalPlace;
+     public Transform enemyPlace;
 
      public bool finishStart;
 
+     float[] floorScales;
+     int fScales_pointer = 0;
+    
+    float[] arenaScale_x;
+    float[] arenaScale_z;
+    int arena_sPointer = 0;
+
+    float[] swervePluses;
+    float[] swerveMinuses;
+    int swervePointer = 0;
+
+    Vector3 camVector;
+
+    float time = 4f;
+    bool hitHero;
+
+    public Transform enemy;
+
+    private bool timerSet = true;
+    private float startTime;
+
+    public float enemyHP = 10;
+    public float heroHP = 10;
+    
     //bool resetPos = false;
      void Awake() { Instance = this; }
     
@@ -63,14 +89,14 @@ public class hhController : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = 60;
-        speed = 9;
+        speed = 15;
         DOTween.Init();
         anim = GetComponent<Animator>();
         if(verticalActive)
         {
             rotationPoint.rotation = Quaternion.Euler(-90,0,0);
             transform.position = new Vector3(transform.position.x,transform.position.y,3.0f);
-            Camera.main.GetComponent<CamScript>().offset.y=1;
+            //Camera.main.GetComponent<CamScript>().offset.y=1;
             anim.SetBool("verticalActive",true);
 
 
@@ -78,8 +104,17 @@ public class hhController : MonoBehaviour
 
         camPos = Camera.main.transform.localPosition;
         camPos.x *= 0.5f;
-        camPos.y *= 2;
+        camPos.y *= 2f;
         camPos.z *= 0.5f;
+
+        floorScales = new float[5];
+        arenaScale_x =new float[5];
+        arenaScale_z = new float[5];
+        swervePluses = new float[5];
+        swerveMinuses = new float[5];
+
+        camVector = new Vector3(0,5,532);
+       
     }
 
     // Update is called once per frame
@@ -88,18 +123,22 @@ public class hhController : MonoBehaviour
         
        if(gameStart && !finishStart){ Movement();
        }
+       else if(finishStart){FinalControl();}
+    
+       
 
      
     }
 
    public void ScaleUp()
     {
-        float scaleTo = transform.lossyScale.x+1f;
+        
+        float scaleTo = transform.lossyScale.x+1;
        /* transform.localScale = new Vector3(transform.localScale.x-0.2f,transform.localScale.y-0.2f,transform.localScale.z-0.2f);
         transform.localScale = new Vector3(transform.localScale.x+0.4f,transform.localScale.y+0.4f,transform.localScale.z+0.4f);
         transform.localScale = new Vector3(transform.localScale.x-0.1f,transform.localScale.y-0.1f,transform.localScale.z-0.1f);*/
         rotationPoint.DOScale(scaleTo,1.2f).SetEase(Ease.OutBounce);
-        Camera.main.transform.DOLocalMove( Camera.main.transform.localPosition+camPos,1.5f); 
+       Camera.main.transform.DOLocalMove( Camera.main.transform.localPosition+camPos,1.5f); 
         /*foreach(Transform child in floor)
         {
             child.DOScale(new Vector3(
@@ -108,26 +147,76 @@ public class hhController : MonoBehaviour
                 child.localScale.z
             ),0.75f).SetEase(Ease.Linear);
         }*/
+        floorScales[fScales_pointer] =  floor.localScale.x;
+        fScales_pointer++;
+
+        arenaScale_x[arena_sPointer] = arena.localScale.x;
+        arenaScale_z[arena_sPointer] = arena.localScale.z;
+        arena_sPointer++;
+
+        swervePluses[swervePointer] = gameObject.GetComponent<SwerveSystem>().swervePlus;
+        swerveMinuses[swervePointer] = gameObject.GetComponent<SwerveSystem>().swerveMinus;
+        swervePointer++;
 
         floor.DOScale(new Vector3(
                floor.localScale.x+(floor.localScale.x*0.5f),
                 floor.localScale.y,
                 floor.localScale.z
             ),0.75f).SetEase(Ease.Linear);
+
         arena.DOScale(new Vector3(
                arena.localScale.x+(arena.localScale.x*0.5f),
                 arena.localScale.y,
                 arena.localScale.z+(arena.localScale.z*0.5f)
             ),0.75f).SetEase(Ease.Linear);
+
+         enemy.transform.localScale = Vector3.one*scaleTo;
         
+        
+
         gameObject.GetComponent<SwerveSystem>().swerveMinus +=gameObject.GetComponent<SwerveSystem>().swerveMinus * 0.5f;
         gameObject.GetComponent<SwerveSystem>().swervePlus += gameObject.GetComponent<SwerveSystem>().swervePlus * 0.5f;
         gameObject.GetComponent<SwerveSystem>().swerveSpeed += 0.5f;
         textHeight+=2;
-        speed +=9/2;
+        //Vector2 tmpOffset =  floor.GetComponent<MeshRenderer>().material.mainTextureScale;
+       // tmpOffset.y += 10f;
+        //floor.GetComponent<MeshRenderer>().material.mainTextureScale = tmpOffset;
+        speed +=10/2;
 
+        camVector.x += 1; camVector.y+=5; camVector.z-=10;
+    }
+
+    public void ScaleDown()
+    {
         
+        float scaleTo = transform.lossyScale.x-1;
+        scaleTo = Mathf.Round(scaleTo);
+        rotationPoint.DOScale(scaleTo,1.2f).SetEase(Ease.OutBounce);
+       Camera.main.transform.DOLocalMove( Camera.main.transform.localPosition-camPos,1.5f); 
+      
+        floor.DOScale(new Vector3(
+               //floor.localScale.x-(floor.localScale.x*0.5f),
+               floorScales[EdibleManager.Instance.scaleCount-3],
+                floor.localScale.y,
+                floor.localScale.z
+            ),0.75f).SetEase(Ease.Linear);
+        arena.DOScale(new Vector3(
+               //arena.localScale.x-(arena.localScale.x*0.5f),
+               arenaScale_x[EdibleManager.Instance.scaleCount-3],
+                arena.localScale.y,
+                arenaScale_z[EdibleManager.Instance.scaleCount-3]
+                //arena.localScale.z-(arena.localScale.z*0.5f)
+            ),0.75f).SetEase(Ease.Linear);
+        
+        enemy.transform.localScale = Vector3.one*scaleTo;
+        gameObject.GetComponent<SwerveSystem>().swerveMinus = swerveMinuses[EdibleManager.Instance.scaleCount-3]; //-=gameObject.GetComponent<SwerveSystem>().swerveMinus * 0.5f;
+        gameObject.GetComponent<SwerveSystem>().swervePlus = swervePluses[EdibleManager.Instance.scaleCount-3];//-= gameObject.GetComponent<SwerveSystem>().swervePlus * 0.5f;
+        gameObject.GetComponent<SwerveSystem>().swerveSpeed -= 0.5f;
+        textHeight+=2;
+       
+        speed -=10/2;
 
+        camVector.x -= 1; camVector.y-=5; camVector.z+=10;
     }
 
     void LateUpdate()
@@ -292,26 +381,73 @@ IEnumerator TurnOffText(Transform textTemp)
 
 }
 
-public void FinishStart()
+IEnumerator FinalTimer()
 {
-    transform.DOJump(new Vector3(
+    yield return new WaitForSeconds(1.6f);
+    Camera.main.GetComponent<CameraShaker>().enabled = true;
+}
+
+void FinalControl()
+{   if(timerSet){startTime = Time.time; timerSet =false;}
+    float t = Time.time-startTime;
+       // string min =((int)t/60).ToString();
+        string sec = (t%60).ToString("f1");
+        Debug.Log(sec);
+    if(Input.GetMouseButtonDown(0))
+    {
+        int tmp = Random.Range(1,3);
+        anim.SetTrigger("Hit"+tmp);
+        startTime =Time.time;
+        CameraShaker.Instance.ShakeOnce(2f,2f,1f,1f);
+        enemyHP-=2;
+        CanvasScript.Instance.enmyDec = true;
+       
+    }
+
+    else if(float.Parse(sec) >=4f)
+    {
+        int tmp = Random.Range(1,3);
+        enemy.GetChild(0).gameObject.GetComponent<Animator>().SetTrigger("Hit"+tmp);
+        startTime = Time.time;
+        CameraShaker.Instance.ShakeOnce(2f,2f,1f,1f);
+        heroHP -= 2;
+        CanvasScript.Instance.heroDec = true;
+    }
+    
+
+}
+
+
+public void FinishStart()
+{   
+    Camera.main.transform.parent = null;
+    Camera.main.transform.rotation = Quaternion.Euler(15,0,0);
+    Camera.main.transform.DOMove(camVector,1.5f);
+        transform.DOJump(new Vector3(
                     hhController.Instance.finalPlace.position.x,
                     hhController.Instance.transform.position.y,
                     hhController.Instance.finalPlace.position.z),3,1,1);
-    Camera.main.transform.DOLocalMove(new Vector3(0,10.5f,22),1.5f);
+    enemy.GetChild(0).DOMove(enemyPlace.position,1);
+    CameraShaker.Instance.RestPositionOffset =camVector;
+    CameraShaker.Instance.RestRotationOffset = new Vector3(15,0,0);
+    StartCoroutine(FinalTimer());
+    /*Camera.main.transform.DOLocalMove(new Vector3(0,10.5f,22),1.5f);
     Camera.main.transform.DOLocalRotateQuaternion(Quaternion.Euler(
         Camera.main.transform.rotation.eulerAngles.x,
         0,
-        Camera.main.transform.rotation.eulerAngles.z),1.5f);
+        Camera.main.transform.rotation.eulerAngles.z),1.5f);*/
         StartCoroutine(CanvasOpen());
 }
 
 IEnumerator CanvasOpen()
 {
-    yield return new WaitForSeconds(1.6f);
+    yield return new WaitForSeconds(1f);
     
-    canvas.transform.GetChild(4).gameObject.SetActive(true);
+    canvas.transform.GetChild(5).DOScale(10,0.5f).SetLoops(2,LoopType.Yoyo).SetEase(Ease.Linear);
+    canvas.transform.GetChild(6).gameObject.SetActive(true);
+
+    /*canvas.transform.GetChild(4).gameObject.SetActive(true);
     PlayerPrefs.SetInt("Level",
-        PlayerPrefs.GetInt("Level",1)+1);
+        PlayerPrefs.GetInt("Level",1)+1);*/
 }
 }

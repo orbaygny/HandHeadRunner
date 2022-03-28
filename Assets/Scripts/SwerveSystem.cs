@@ -45,6 +45,7 @@ public class SwerveSystem : MonoBehaviour
         if(hhController.Instance.gameStart){
         Movement();
         Swerve();
+       // CamSwerve();
         }
     }
 
@@ -91,5 +92,32 @@ public class SwerveSystem : MonoBehaviour
               
             break;
         }
+    }
+
+    void CamSwerve()
+    {   float swerveAmount = Time.fixedDeltaTime * swerveSpeed * MoveFactorX;
+
+        switch(EdibleManager.Instance.scaleCount-1)
+        {
+            case 1:
+            if(MoveFactorX>0  && Camera.main.transform.localPosition.x<5.5000f)
+                {Camera.main.transform.Translate(swerveAmount/1.3f,0,0);}
+
+            if(MoveFactorX<=0 && Camera.main.transform.localPosition.x>-2)
+                {Camera.main.transform.Translate(swerveAmount/1.3f,0,0);}
+            break;
+
+            case 2:
+            if(MoveFactorX>0  && Camera.main.transform.localPosition.x<8f)
+                {Camera.main.transform.Translate(swerveAmount/1.3f,0,0);}
+
+            if(MoveFactorX<=0 && Camera.main.transform.localPosition.x>-2)
+                {Camera.main.transform.Translate(swerveAmount/1.3f,0,0);}
+            break;
+            
+            case 3:
+            break;
+        }
+       
     }
 }

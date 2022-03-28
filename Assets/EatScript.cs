@@ -15,13 +15,33 @@ public class EatScript : StateMachineBehaviour
         {
             GameObject.Destroy(hhController.Instance.edible);
            hhController.Instance.EatTexter(EatTrigger.lastEated);
+           CanvasScript.Instance.inc = true;
+
             
         }
 
         if(EdibleManager.Instance.eatCount >= 10){
+            if(EdibleManager.Instance.scaleCount == 5)
+            {
+                EdibleManager.Instance.positionScaler = 5;
+            }
+            else{EdibleManager.Instance.positionScaler = 1;}
             hhController.Instance.ScaleUp(); 
             EdibleManager.Instance.ChangeEdible();
-            EdibleManager.Instance.eatCount -=10;
+            EdibleManager.Instance.eatCount -=10;}
+
+        if(EdibleManager.Instance.eatCount < 0 &&  EdibleManager.Instance.scaleCount-1 > 1)
+        {   
+            if(EdibleManager.Instance.scaleCount == 6)
+            {
+                EdibleManager.Instance.positionScaler = -5;
+            }
+            else{EdibleManager.Instance.positionScaler = -1;}
+            hhController.Instance.ScaleDown();
+            EdibleManager.Instance.scaleCount-=2;
+            EdibleManager.Instance.eatCount =0;
+            EdibleManager.Instance.ChangeEdible();
+            
 
         }
     }

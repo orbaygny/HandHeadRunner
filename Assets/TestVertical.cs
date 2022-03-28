@@ -15,7 +15,7 @@ void Awake()
         transform.GetChild(1).gameObject.SetActive(false);
         transform.GetChild(0).gameObject.SetActive(true);
         Camera.main.transform.localRotation = Quaternion.Euler(15,-10,0);
-         Camera.main.transform.localPosition = new Vector3(2,1.5f,-10);
+         Camera.main.transform.localPosition = new Vector3(2f,1.5f,-10);
 
         
         

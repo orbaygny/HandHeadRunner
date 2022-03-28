@@ -14,6 +14,17 @@ TagManager:
   - Mailbox
   - Table
   - Bookshelf
+  - Mouton
+  - AirBal
+  - House
+  - Plane
+  - RottenApple
+  - Cactus
+  - Volcano
+  - Ufo
+  - Elect
+  - Hero
+  - Evil
   layers:
   - Default
   - TransparentFX
@@ -22,7 +33,7 @@ TagManager:
   - Water
   - UI
   - Edible
-  - 
+  - Negative
   - 
   - 
   - 
