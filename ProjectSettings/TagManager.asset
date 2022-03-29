@@ -25,6 +25,12 @@ TagManager:
   - Elect
   - Hero
   - Evil
+  - Dynamite
+  - Bomb1
+  - Bomb2
+  - Bomb3
+  - Bomb4
+  - Bomb5
   layers:
   - Default
   - TransparentFX
@@ -34,7 +40,7 @@ TagManager:
   - UI
   - Edible
   - Negative
-  - 
+  - Bombs
   - 
   - 
   - 

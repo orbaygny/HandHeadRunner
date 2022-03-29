@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using EZCameraShake;
+using MoreMountains.NiceVibrations;
 
 public class hhController : MonoBehaviour
 {
@@ -82,6 +83,7 @@ public class hhController : MonoBehaviour
     public float enemyHP = 10;
     public float heroHP = 10;
     
+    bool followEnemy;
     //bool resetPos = false;
      void Awake() { Instance = this; }
     
@@ -125,7 +127,17 @@ public class hhController : MonoBehaviour
        }
        else if(finishStart){FinalControl();}
     
-       
+       if(followEnemy){
+           Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position,
+               new Vector3(enemy.GetChild(0).GetChild(2).position.x,
+               Camera.main.transform.position.y,
+               Camera.main.transform.position.z),1f);
+
+               if(enemy.GetChild(0).GetComponent<Rigidbody>().velocity.magnitude == 0)
+               {
+                   CanvasScript.Instance.transform.GetChild(4).gameObject.SetActive(true);
+               }
+       }
 
      
     }
@@ -221,9 +233,7 @@ public class hhController : MonoBehaviour
 
     void LateUpdate()
     {
-        //parent.position += parent.forward*3*Time.fixedDeltaTime;
-
-        ResetPos();
+       
 
         
     }
@@ -383,11 +393,31 @@ IEnumerator TurnOffText(Transform textTemp)
 
 }
 
-IEnumerator FinalTimer()
+ IEnumerator FinalTimer()
 {
     yield return new WaitForSeconds(1.6f);
     Camera.main.GetComponent<CameraShaker>().enabled = true;
+    Transform prnt = finalPlace.parent;
+    for(int i =3 ; i<13 ;i++)
+    {
+        prnt.GetChild(i).gameObject.SetActive(true);
+    }
 }
+
+IEnumerator Ending()
+{
+    yield return new WaitForSeconds(1f);
+    //Camera.main.transform.parent = enemy; 
+    CanvasScript.Instance.transform.GetChild(6).gameObject.SetActive(false); 
+     enemy.GetChild(0).GetComponent<Rigidbody>().isKinematic = false;
+            enemy.GetChild(0).GetComponent<Rigidbody>().useGravity = true;
+            enemy.GetChild(0).GetComponent<SphereCollider>().enabled = true;
+
+            int a = Random.Range(25,51);
+            enemy.GetChild(0).GetComponent<Rigidbody>().AddForce(Vector3.right*a*(EdibleManager.Instance.scaleCount-1),ForceMode.Impulse);
+            followEnemy = true;
+}
+
 
 void FinalControl()
 {   if(timerSet){startTime = Time.time; timerSet =false;}
@@ -397,16 +427,19 @@ void FinalControl()
         Debug.Log(sec);
     if(Input.GetMouseButtonDown(0))
     {
-        int tmp = Random.Range(1,3);
-        anim.SetTrigger("Hit"+tmp);
+        
         if(enemyHP==2){
-            enemy.GetChild(0).GetComponent<Rigidbody>().isKinematic = false;
-            enemy.GetChild(0).GetComponent<Rigidbody>().useGravity = true;
-            enemy.GetChild(0).GetComponent<SphereCollider>().enabled = true;
-            enemy.GetChild(0).GetComponent<Rigidbody>().AddForce(Vector3.right*50,ForceMode.Impulse);
+            anim.SetTrigger("Hit");
+            MMVibrationManager.Haptic(HapticTypes.Failure);
+            Camera.main.gameObject.GetComponent<CameraShaker>().enabled=false;
+            StartCoroutine(Ending());
+           
         }
+      else{  int tmp = Random.Range(1,3);
+        anim.SetTrigger("Hit"+tmp);}
         startTime =Time.time;
         CameraShaker.Instance.ShakeOnce(2f,2f,1f,1f);
+        MMVibrationManager.Haptic(HapticTypes.HeavyImpact);
         enemyHP-=2;
         CanvasScript.Instance.enmyDec = true;
        
@@ -418,6 +451,7 @@ void FinalControl()
         enemy.GetChild(0).gameObject.GetComponent<Animator>().SetTrigger("Hit"+tmp);
         startTime = Time.time;
         CameraShaker.Instance.ShakeOnce(2f,2f,1f,1f);
+        MMVibrationManager.Haptic(HapticTypes.Failure);
         heroHP -= 2;
         CanvasScript.Instance.heroDec = true;
     }

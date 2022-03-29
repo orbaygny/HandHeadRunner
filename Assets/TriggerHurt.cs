@@ -13,6 +13,11 @@ public class TriggerHurt : StateMachineBehaviour
 
             if(stateInfo.IsName("Hit2")){
             hhController.Instance.enemy.GetChild(0).GetComponent<Animator>().SetTrigger("Hurt2"); }
+
+            if(stateInfo.IsName("FinalHit"))
+            {
+                hhController.Instance.enemy.GetChild(0).GetComponent<Animator>().SetTrigger("FHurt"); 
+            }
         }
 
         if(animator.gameObject.tag == "Evil")

@@ -135,6 +135,12 @@ public class EdibleManager : MonoBehaviour
                      placePoint.GetChild(1).gameObject.SetActive(true);
                 locations.Add(placePoint.GetChild(1));
                 }
+                  if(placePoint.gameObject.layer == 8)
+                {
+                    placePoint.GetChild(0).gameObject.SetActive(true);
+                locations.Add(placePoint.GetChild(0));
+        
+                }
                
                 
             }
@@ -280,6 +286,8 @@ public class EdibleManager : MonoBehaviour
                          placePoint.localPosition += Vector3.right*positionScaler;
                     }
                }
+
+              
                 
                  if(placePoint.gameObject.layer == 6){
                     
@@ -294,6 +302,15 @@ public class EdibleManager : MonoBehaviour
                 locations.Add(placePoint.GetChild(1));
                 Sizer(placePoint.GetChild(1));
                 }
+
+                  if(placePoint.gameObject.layer == 8)
+                {
+                    placePoint.GetChild(0).gameObject.SetActive(true);
+                locations.Add(placePoint.GetChild(0));
+                Sizer(placePoint.GetChild(0));
+                }
+
+               
    
             }
             scaleCount++;
@@ -322,6 +339,13 @@ public class EdibleManager : MonoBehaviour
                      placePoint.GetChild(3).gameObject.SetActive(true);
                 locations.Add(placePoint.GetChild(3));
                 Sizer(placePoint.GetChild(3));
+                }
+
+                 if(placePoint.gameObject.layer == 8)
+                {
+                    placePoint.GetChild(1).gameObject.SetActive(true);
+                locations.Add(placePoint.GetChild(1));
+                Sizer(placePoint.GetChild(1));
                 }
                 
                 
@@ -355,6 +379,13 @@ public class EdibleManager : MonoBehaviour
                 locations.Add(placePoint.GetChild(5));
                 Sizer(placePoint.GetChild(5));
                 }
+
+                 if(placePoint.gameObject.layer == 8)
+                {
+                    placePoint.GetChild(2).gameObject.SetActive(true);
+                locations.Add(placePoint.GetChild(2));
+                Sizer(placePoint.GetChild(2));
+                }
                 
             }
             
@@ -381,7 +412,14 @@ public class EdibleManager : MonoBehaviour
                      placePoint.GetChild(7).gameObject.SetActive(true);
                 locations.Add(placePoint.GetChild(7));
                 Sizer(placePoint.GetChild(7));
-                }}
+                }
+                 if(placePoint.gameObject.layer == 8)
+                {
+                    placePoint.GetChild(3).gameObject.SetActive(true);
+                locations.Add(placePoint.GetChild(3));
+                Sizer(placePoint.GetChild(3));
+                }
+                }
                 scaleCount++;
              break;
 
@@ -406,7 +444,14 @@ public class EdibleManager : MonoBehaviour
                      placePoint.GetChild(9).gameObject.SetActive(true);
                 locations.Add(placePoint.GetChild(9));
                 Sizer(placePoint.GetChild(9));
-                }}
+                }
+                 if(placePoint.gameObject.layer == 8)
+                {
+                    placePoint.GetChild(4).gameObject.SetActive(true);
+                locations.Add(placePoint.GetChild(4));
+                Sizer(placePoint.GetChild(4));
+                }
+                }
                 scaleCount++;
              break;
 
