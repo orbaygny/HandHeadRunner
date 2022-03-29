@@ -350,6 +350,8 @@ public void Vertical(){rotateActive = false; //verticalActive = true;
 gameObject.SetActive(false);
 SceneManager.LoadScene(0);}  
 
+public void Restart(){SceneManager.LoadScene(0);}
+
 public void wOutRotation(){rotateActive = false; TestVertical._vActive = false; SceneManager.LoadScene(0);}
 
 public void EatTexter(int count)
@@ -397,6 +399,12 @@ void FinalControl()
     {
         int tmp = Random.Range(1,3);
         anim.SetTrigger("Hit"+tmp);
+        if(enemyHP==2){
+            enemy.GetChild(0).GetComponent<Rigidbody>().isKinematic = false;
+            enemy.GetChild(0).GetComponent<Rigidbody>().useGravity = true;
+            enemy.GetChild(0).GetComponent<SphereCollider>().enabled = true;
+            enemy.GetChild(0).GetComponent<Rigidbody>().AddForce(Vector3.right*50,ForceMode.Impulse);
+        }
         startTime =Time.time;
         CameraShaker.Instance.ShakeOnce(2f,2f,1f,1f);
         enemyHP-=2;

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using MoreMountains.NiceVibrations;
+
+
 
 
 public class EatTrigger : MonoBehaviour
@@ -68,6 +71,7 @@ public class EatTrigger : MonoBehaviour
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.12f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo);
             hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+            MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             break;
 
             case "Cupcake":
@@ -108,6 +112,7 @@ public class EatTrigger : MonoBehaviour
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.5f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo);
             hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             break;
 
             case "Foodpod":
@@ -244,6 +249,7 @@ public class EatTrigger : MonoBehaviour
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.5f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo);
             hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             break;
 
             case "House":
@@ -265,6 +271,7 @@ public class EatTrigger : MonoBehaviour
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.5f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo);
             hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             break;
 
             case "Plane":
@@ -286,6 +293,7 @@ public class EatTrigger : MonoBehaviour
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.5f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo);
             hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             break;
 
             case "RottenApple":
@@ -307,6 +315,8 @@ public class EatTrigger : MonoBehaviour
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
             hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           MMVibrationManager.Haptic(HapticTypes.Failure);
+
             break;
 
              case "Cactus":
@@ -328,6 +338,7 @@ public class EatTrigger : MonoBehaviour
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
             hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
 
              case "Volcano":
@@ -349,6 +360,7 @@ public class EatTrigger : MonoBehaviour
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
             hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
 
              case "Elect":
@@ -370,6 +382,7 @@ public class EatTrigger : MonoBehaviour
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
             hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
 
              case "Ufo":
@@ -391,6 +404,7 @@ public class EatTrigger : MonoBehaviour
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
             hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
 
             
