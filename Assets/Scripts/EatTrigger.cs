@@ -61,6 +61,7 @@ public class EatTrigger : MonoBehaviour
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
             EdibleManager.Instance.eatCount +=2;
+            EdibleManager.Instance.negativeCount =0;
             lastEated = 3;
             parentForDelete.SetActive(false);
 
@@ -304,13 +305,15 @@ public class EatTrigger : MonoBehaviour
             other.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
-            EdibleManager.Instance.eatCount -=2;
+            
+            if(EdibleManager.Instance.eatCount>0){EdibleManager.Instance.eatCount-=2;}
+            else{EdibleManager.Instance.negativeCount +=1;}
             lastEated = 3;
             parentForDelete.SetActive(false);
 
             
             hhController.Instance.walk = false;
-            if(EdibleManager.Instance.eatCount  == -10){hhController.Instance.anim.SetTrigger("Eat");}
+            if(EdibleManager.Instance.negativeCount  == 5){hhController.Instance.anim.SetTrigger("Eat");}
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
             hhController.Instance.EatTexter(EatTrigger.lastEated);
@@ -368,7 +371,7 @@ public class EatTrigger : MonoBehaviour
             parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(-0.3f,-0.15f,0.12f);
-            other.transform.localScale = new Vector3(1f,1f,1f);
+            other.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
             EdibleManager.Instance.eatCount -=2;
@@ -414,13 +417,14 @@ public class EatTrigger : MonoBehaviour
             other.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
-            EdibleManager.Instance.eatCount -= 10;
+            //EdibleManager.Instance.negativeCount =5;
             lastEated = 3;
             parentForDelete.SetActive(false);
 
             
             hhController.Instance.walk = false;
-            if(EdibleManager.Instance.eatCount  == -10){hhController.Instance.anim.SetTrigger("Eat");}
+            hhController.Instance.anim.SetTrigger("Eat");
+            hhController.Instance.anim.SetBool("Bomb",true);
            
            MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
@@ -432,13 +436,15 @@ public class EatTrigger : MonoBehaviour
             other.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
-            EdibleManager.Instance.eatCount -= 10;
+            //EdibleManager.Instance.eatCount -= 10;
             lastEated = 3;
             parentForDelete.SetActive(false);
 
             
             hhController.Instance.walk = false;
-            if(EdibleManager.Instance.eatCount  == -10){hhController.Instance.anim.SetTrigger("Eat");}
+             hhController.Instance.anim.SetTrigger("Eat");
+            hhController.Instance.anim.SetBool("Bomb",true);
+            
            
            MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
@@ -450,13 +456,14 @@ public class EatTrigger : MonoBehaviour
             other.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
-            EdibleManager.Instance.eatCount -= 10;
+           // EdibleManager.Instance.eatCount -= 10;
             lastEated = 3;
             parentForDelete.SetActive(false);
 
             
             hhController.Instance.walk = false;
-            if(EdibleManager.Instance.eatCount  == -10){hhController.Instance.anim.SetTrigger("Eat");}
+             hhController.Instance.anim.SetTrigger("Eat");
+            hhController.Instance.anim.SetBool("Bomb",true);
            
            MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
@@ -468,14 +475,15 @@ public class EatTrigger : MonoBehaviour
             other.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
-            EdibleManager.Instance.eatCount -= 10;
+            //EdibleManager.Instance.eatCount -= 10;
             lastEated = 3;
             parentForDelete.SetActive(false);
 
             
             hhController.Instance.walk = false;
-            if(EdibleManager.Instance.eatCount  == -10){hhController.Instance.anim.SetTrigger("Eat");}
-           
+           // if(EdibleManager.Instance.eatCount  == -10){hhController.Instance.anim.SetTrigger("Eat");}
+            hhController.Instance.anim.SetTrigger("Eat");
+            hhController.Instance.anim.SetBool("Bomb",true);
            MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
 
@@ -492,8 +500,9 @@ public class EatTrigger : MonoBehaviour
 
             
             hhController.Instance.walk = false;
-            if(EdibleManager.Instance.eatCount  == -10){hhController.Instance.anim.SetTrigger("Eat");}
-           
+            //if(EdibleManager.Instance.eatCount  == -10){hhController.Instance.anim.SetTrigger("Eat");}
+            hhController.Instance.anim.SetTrigger("Eat");
+            hhController.Instance.anim.SetBool("Bomb",true);
            MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
             

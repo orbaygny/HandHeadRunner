@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
@@ -44,6 +44,8 @@ public class EdibleManager : MonoBehaviour
             placePoint.GetChild(2).localScale = Vector3.one*2.5f;
             placePoint.GetChild(4).localScale = Vector3.one*3;
             placePoint.GetChild(6).localScale = Vector3.one*7;
+            placePoint.GetChild(7).localScale = new Vector3(2,2.2f,1.5f);
+            placePoint.GetChild(7).GetComponent<BoxCollider>().isTrigger = true;
             placePoint.GetChild(8).gameObject.tag = "Plane";
             placePoint.GetChild(8).gameObject.layer = 6;
             placePoint.GetChild(8).localScale = Vector3.one*4f;

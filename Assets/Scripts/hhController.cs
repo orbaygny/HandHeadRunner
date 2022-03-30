@@ -70,6 +70,9 @@ public class hhController : MonoBehaviour
     float[] swerveMinuses;
     int swervePointer = 0;
 
+    float[] heroScales;
+    int heroSpointer=0;
+
     Vector3 camVector;
 
     float time = 4f;
@@ -84,6 +87,9 @@ public class hhController : MonoBehaviour
     public float heroHP = 10;
     
     bool followEnemy;
+
+    public Material bombMat;
+    
     //bool resetPos = false;
      void Awake() { Instance = this; }
     
@@ -114,6 +120,7 @@ public class hhController : MonoBehaviour
         arenaScale_z = new float[5];
         swervePluses = new float[5];
         swerveMinuses = new float[5];
+        heroScales = new float[5];
 
         camVector = new Vector3(0,5,532);
        
@@ -146,6 +153,8 @@ public class hhController : MonoBehaviour
     {
         
         float scaleTo = transform.lossyScale.x+1;
+        heroScales[heroSpointer] = transform.lossyScale.x;
+        heroSpointer++;
        /* transform.localScale = new Vector3(transform.localScale.x-0.2f,transform.localScale.y-0.2f,transform.localScale.z-0.2f);
         transform.localScale = new Vector3(transform.localScale.x+0.4f,transform.localScale.y+0.4f,transform.localScale.z+0.4f);
         transform.localScale = new Vector3(transform.localScale.x-0.1f,transform.localScale.y-0.1f,transform.localScale.z-0.1f);*/
@@ -201,8 +210,8 @@ public class hhController : MonoBehaviour
     public void ScaleDown()
     {
         
-        float scaleTo = transform.lossyScale.x-1;
-        scaleTo = Mathf.Round(scaleTo);
+        float scaleTo = heroScales[EdibleManager.Instance.scaleCount-3];//transform.lossyScale.x-1;
+        //scaleTo = Mathf.Round(scaleTo);
         rotationPoint.DOScale(scaleTo,1.2f).SetEase(Ease.OutBounce);
        Camera.main.transform.DOLocalMove( Camera.main.transform.localPosition-camPos,1.5f); 
       
@@ -406,7 +415,7 @@ IEnumerator TurnOffText(Transform textTemp)
 
 IEnumerator Ending()
 {
-    yield return new WaitForSeconds(1f);
+    yield return new WaitForSeconds(0.4f);
     //Camera.main.transform.parent = enemy; 
     CanvasScript.Instance.transform.GetChild(6).gameObject.SetActive(false); 
      enemy.GetChild(0).GetComponent<Rigidbody>().isKinematic = false;
@@ -492,4 +501,13 @@ IEnumerator CanvasOpen()
     PlayerPrefs.SetInt("Level",
         PlayerPrefs.GetInt("Level",1)+1);*/
 }
+
+public void Fail()
+{
+    speed =0;
+    rotationPoint.DOScale(Vector3.zero,0.5f).SetEase(Ease.InExpo);
+    canvas.transform.GetChild(7).gameObject.SetActive(true);
+    
+}
+
 }

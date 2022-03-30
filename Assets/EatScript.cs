@@ -44,6 +44,11 @@ public class EatScript : StateMachineBehaviour
             
 
         }
+
+        if(EdibleManager.Instance.scaleCount-1 == 1 && EdibleManager.Instance.negativeCount == 5 )
+        {
+            hhController.Instance.Fail();
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
