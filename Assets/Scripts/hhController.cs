@@ -88,6 +88,8 @@ public class hhController : MonoBehaviour
     
     bool followEnemy;
 
+    bool fight;
+
     public Material bombMat;
     
     //bool resetPos = false;
@@ -429,7 +431,8 @@ IEnumerator Ending()
 
 
 void FinalControl()
-{   if(timerSet){startTime = Time.time; timerSet =false;}
+{   
+    if(fight){if(timerSet){startTime = Time.time; timerSet =false;}
     float t = Time.time-startTime;
        // string min =((int)t/60).ToString();
         string sec = (t%60).ToString("f1");
@@ -463,8 +466,7 @@ void FinalControl()
         MMVibrationManager.Haptic(HapticTypes.Failure);
         heroHP -= 2;
         CanvasScript.Instance.heroDec = true;
-    }
-    
+    }}
 
 }
 
@@ -496,6 +498,7 @@ IEnumerator CanvasOpen()
     
     canvas.transform.GetChild(5).DOScale(10,0.5f).SetLoops(2,LoopType.Yoyo).SetEase(Ease.Linear);
     canvas.transform.GetChild(6).gameObject.SetActive(true);
+    fight = true;
 
     /*canvas.transform.GetChild(4).gameObject.SetActive(true);
     PlayerPrefs.SetInt("Level",
