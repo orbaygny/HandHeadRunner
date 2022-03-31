@@ -30,7 +30,7 @@ public class SwerveSystem : MonoBehaviour
         x.x = Mathf.Clamp(x.x,swerveMinus,swervePlus);
         parentObject.transform.position = x;
         if (Input.GetMouseButtonDown(0))
-        {
+        {   GameManager.ApkGameStart();
             _lastFrameFingerPositionX = Input.mousePosition.x;
         }
         else if (Input.GetMouseButton(0))

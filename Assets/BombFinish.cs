@@ -26,6 +26,9 @@ public class BombFinish : StateMachineBehaviour
        {
         hhController.Instance.transform.GetChild(0).gameObject.GetComponent<SkinnedMeshRenderer>().material 
         = normalMat;
+        hhController.Instance.transform.GetChild(7).gameObject.SetActive(true);
+        hhController.Instance.transform.GetChild(0).gameObject.GetComponent<SkinnedMeshRenderer>().material 
+        = hhController.Instance.bombFaceMat;
        }
     }
 
@@ -33,7 +36,7 @@ public class BombFinish : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
        
-       hhController.Instance.Fail();
+       //hhController.Instance.Fail();
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

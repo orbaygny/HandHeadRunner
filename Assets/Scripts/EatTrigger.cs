@@ -28,7 +28,7 @@ public class EatTrigger : MonoBehaviour
      private void OnTriggerEnter(Collider other)
     {   
 
-       if(placeHolder.childCount == 0)
+       if(EdibleManager.Instance.eatCount<10)
        {
             switch(other.tag)
         {
@@ -52,7 +52,7 @@ public class EatTrigger : MonoBehaviour
             break;
 
             case "Burger":
-            
+            other.GetComponent<BoxCollider>().enabled = false;
             parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(0.032f,0.05f,-0.096f);
@@ -62,16 +62,16 @@ public class EatTrigger : MonoBehaviour
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
             EdibleManager.Instance.eatCount +=2;
             EdibleManager.Instance.negativeCount =0;
-            lastEated = 3;
+            lastEated = 2;
             parentForDelete.SetActive(false);
 
             
             hhController.Instance.walk = false;
             if(EdibleManager.Instance.eatCount == 10){hhController.Instance.anim.SetTrigger("Eat");}
             else{GameObject.Destroy(hhController.Instance.edible);
-             hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.12f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo);
-            hhController.Instance.EatTexter(EatTrigger.lastEated);
+             hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.12f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo); 
            CanvasScript.Instance.inc = true;}
+           hhController.Instance.EatTexter(EatTrigger.lastEated);
             MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             break;
 
@@ -95,7 +95,7 @@ public class EatTrigger : MonoBehaviour
             break;
 
             case "Mouton":
-            
+            other.GetComponent<BoxCollider>().enabled = false;
              parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(0.00476f,0.000456f,0);
@@ -111,8 +111,8 @@ public class EatTrigger : MonoBehaviour
             if(EdibleManager.Instance.eatCount == 10){hhController.Instance.anim.SetTrigger("Eat");}
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.5f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo);
-            hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             break;
 
@@ -232,7 +232,7 @@ public class EatTrigger : MonoBehaviour
             break;
 
              case "AirBal":
-             
+             other.GetComponent<BoxCollider>().enabled = false;
             parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(-0.3f,-0.15f,0.12f);
@@ -240,7 +240,7 @@ public class EatTrigger : MonoBehaviour
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
             EdibleManager.Instance.eatCount +=2;
-            lastEated = 3;
+            lastEated = 2;
             parentForDelete.SetActive(false);
 
             
@@ -248,13 +248,13 @@ public class EatTrigger : MonoBehaviour
             if(EdibleManager.Instance.eatCount == 10){hhController.Instance.anim.SetTrigger("Eat");}
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.5f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo);
-            hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             break;
 
             case "House":
-            
+            other.GetComponent<BoxCollider>().enabled = false;
              parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(-0.3f,-0.15f,0.12f);
@@ -262,7 +262,7 @@ public class EatTrigger : MonoBehaviour
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
             EdibleManager.Instance.eatCount +=2;
-            lastEated = 3;
+            lastEated = 2;
             parentForDelete.SetActive(false);
 
            
@@ -270,13 +270,13 @@ public class EatTrigger : MonoBehaviour
             if(EdibleManager.Instance.eatCount == 10){hhController.Instance.anim.SetTrigger("Eat");}
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.5f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo);
-            hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             break;
 
             case "Plane":
-            
+            other.GetComponent<BoxCollider>().enabled = false;
             parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(-0.3f,-0.15f,0.12f);
@@ -284,7 +284,7 @@ public class EatTrigger : MonoBehaviour
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
             EdibleManager.Instance.eatCount +=2;
-            lastEated = 3;
+            lastEated = 2;
            parentForDelete.SetActive(false);
 
            
@@ -292,13 +292,13 @@ public class EatTrigger : MonoBehaviour
             if(EdibleManager.Instance.eatCount == 10){hhController.Instance.anim.SetTrigger("Eat");}
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.5f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo);
-            hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             break;
 
             case "RottenApple":
-            
+            other.GetComponent<BoxCollider>().enabled = false;
             parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(-0.3f,-0.15f,0.12f);
@@ -308,7 +308,7 @@ public class EatTrigger : MonoBehaviour
             
             if(EdibleManager.Instance.eatCount>0){EdibleManager.Instance.eatCount-=2;}
             else{EdibleManager.Instance.negativeCount +=1;}
-            lastEated = 3;
+            lastEated = -2;
             parentForDelete.SetActive(false);
 
             
@@ -316,14 +316,14 @@ public class EatTrigger : MonoBehaviour
             if(EdibleManager.Instance.negativeCount  == 5){hhController.Instance.anim.SetTrigger("Eat");}
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
-            hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.Failure);
 
             break;
 
              case "Cactus":
-            
+            other.GetComponent<BoxCollider>().enabled = false;
             parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(0.115f,-0.15f,0.12f);
@@ -331,7 +331,7 @@ public class EatTrigger : MonoBehaviour
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
             EdibleManager.Instance.eatCount -=2;
-            lastEated = 3;
+            lastEated = -2;
             parentForDelete.SetActive(false);
 
             
@@ -339,13 +339,13 @@ public class EatTrigger : MonoBehaviour
             if(EdibleManager.Instance.eatCount == -10){hhController.Instance.anim.SetTrigger("Eat");}
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
-            hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
 
              case "Volcano":
-             
+             other.GetComponent<BoxCollider>().enabled = false;
             parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(-0.7f,-0.15f,0.04f);
@@ -353,7 +353,7 @@ public class EatTrigger : MonoBehaviour
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
             EdibleManager.Instance.eatCount -=2;
-            lastEated = 3;
+            lastEated = -2;
            parentForDelete.SetActive(false);
 
             
@@ -361,13 +361,13 @@ public class EatTrigger : MonoBehaviour
             if(EdibleManager.Instance.eatCount == -10){hhController.Instance.anim.SetTrigger("Eat");}
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
-            hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
 
              case "Elect":
-            
+            other.GetComponent<BoxCollider>().enabled = false;
             parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(-0.3f,-0.15f,0.12f);
@@ -375,7 +375,7 @@ public class EatTrigger : MonoBehaviour
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
             EdibleManager.Instance.eatCount -=2;
-            lastEated = 3;
+            lastEated = -2;
            parentForDelete.SetActive(false);
 
             
@@ -383,13 +383,13 @@ public class EatTrigger : MonoBehaviour
             if(EdibleManager.Instance.eatCount == -10){hhController.Instance.anim.SetTrigger("Eat");}
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
-            hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
 
              case "Ufo":
-             
+             other.GetComponent<BoxCollider>().enabled = false;
             parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(-0.268f,0.236f,0.101f);
@@ -397,7 +397,7 @@ public class EatTrigger : MonoBehaviour
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
             EdibleManager.Instance.eatCount -=2;
-            lastEated = 3;
+            lastEated = -2;
             parentForDelete.SetActive(false);
 
             
@@ -405,12 +405,15 @@ public class EatTrigger : MonoBehaviour
             if(EdibleManager.Instance.eatCount == -10){hhController.Instance.anim.SetTrigger("Eat");}
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
-            hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
+           hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
 
             case "Bomb1":
+            other.GetComponent<BoxCollider>().enabled = false;
+            hhController.Instance.speed = 0;
+            Debug.Log("Bomb");
             parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(-0.3f,-0.15f,0.12f);
@@ -430,6 +433,8 @@ public class EatTrigger : MonoBehaviour
             break;
 
             case "Bomb2":
+            other.GetComponent<BoxCollider>().enabled = false;
+            hhController.Instance.speed = 0;
              parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(-0.3f,-0.15f,0.12f);
@@ -450,6 +455,8 @@ public class EatTrigger : MonoBehaviour
             break;
 
             case "Bomb3":
+            other.GetComponent<BoxCollider>().enabled = false;
+            hhController.Instance.speed = 0;
              parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(-0.3f,-0.15f,0.12f);
@@ -469,6 +476,8 @@ public class EatTrigger : MonoBehaviour
             break;
 
             case "Bomb4":
+            other.GetComponent<BoxCollider>().enabled = false;
+            hhController.Instance.speed = 0;
              parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(-0.3f,-0.15f,0.12f);
@@ -488,6 +497,8 @@ public class EatTrigger : MonoBehaviour
             break;
 
             case "Bomb5":
+            other.GetComponent<BoxCollider>().enabled = false;
+            hhController.Instance.speed = 0;
              parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(-0.3f,-0.15f,0.12f);
@@ -505,14 +516,28 @@ public class EatTrigger : MonoBehaviour
             hhController.Instance.anim.SetBool("Bomb",true);
            MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
+
+            case "Diamond":
+            other.GetComponent<BoxCollider>().enabled = false;
+            other.GetComponent<MeshRenderer>().enabled = false;
+             MMVibrationManager.Haptic(HapticTypes.Success);
+            break;
+
+            case "Barrel":
+            other.GetComponent<BoxCollider>().enabled = false;
+            hhController.Instance.speed = 0;
+            MMVibrationManager.Haptic(HapticTypes.Failure);
+            hhController.Instance.anim.SetTrigger("BeatFail");
+
+            break;
             
         }
 
 
         
        // if(eatCount>=10){hhController.Instance.ScaleUp(); eatCount -=10;
-       //               EdibleManager.Instance.ChangeEdible(); }
-       }
+       //            EdibleManager.Instance.ChangeEdible(); }
+      }
         /*if(other.gameObject.tag == "Burger" && placeHolder.childCount ==0){
 
             other.transform.parent = placeHolder; 

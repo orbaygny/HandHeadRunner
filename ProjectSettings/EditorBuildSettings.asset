@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Elephant/elephant_scene.unity
+    guid: 47a686e3b898646ae802a7832a649176
+  - enabled: 1
+    path: Assets/SplashScreen/Scenes/splashscreen.unity
+    guid: 7d64ba40c053c0a44bc62b385d7514c8
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: f95b1e7775073aa4b96ef9ca6940fd4c
   m_configObjects: {}

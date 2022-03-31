@@ -32,7 +32,7 @@ public class hhController : MonoBehaviour
      float clampOffset;
 
      public Transform text;
-     public float  textHeight = 2.5f;
+     public float  textHeight = 6f;
 
     
     public Transform floor;
@@ -91,7 +91,14 @@ public class hhController : MonoBehaviour
     bool fight;
 
     public Material bombMat;
+    public Material bombFaceMat;
+
+    Transform texter;
     
+    bool end;
+
+    public Transform diamonds;
+    public Transform acidBarrel;
     //bool resetPos = false;
      void Awake() { Instance = this; }
     
@@ -125,22 +132,26 @@ public class hhController : MonoBehaviour
         heroScales = new float[5];
 
         camVector = new Vector3(0,5,532);
-       
+
+        texter = rotationP_reset.GetChild(4);
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         
        if(gameStart && !finishStart){ Movement();
        }
-       else if(finishStart){FinalControl();}
+       else if(finishStart&&!end){FinalControl();}
     
        if(followEnemy){
-           Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position,
+           Camera.main.transform.position =  new Vector3(enemy.GetChild(0).GetChild(2).position.x,
+               Camera.main.transform.position.y,
+               Camera.main.transform.position.z);/*Vector3.MoveTowards(Camera.main.transform.position,
                new Vector3(enemy.GetChild(0).GetChild(2).position.x,
                Camera.main.transform.position.y,
-               Camera.main.transform.position.z),1f);
+               Camera.main.transform.position.z),1f);*/
 
                if(enemy.GetChild(0).GetComponent<Rigidbody>().velocity.magnitude == 0)
                {
@@ -207,6 +218,20 @@ public class hhController : MonoBehaviour
         speed +=10/2;
 
         camVector.x += 1; camVector.y+=5; camVector.z-=10;
+
+        if(acidBarrel != null)
+        {
+            acidBarrel.localScale += Vector3.one * 0.2f;
+            acidBarrel.position +=  Vector3.right;
+        }
+        diamonds.localScale += Vector3.one *0.2f;
+        foreach(Transform child in diamonds)
+        {
+            if(child.localPosition.x<0){child.localPosition -= Vector3.right;}
+            if(child.localPosition.x>0){child.localPosition += Vector3.right;}
+            
+        }
+        Invoke("ScaleCalibration",1.2f);
     }
 
     public void ScaleDown()
@@ -240,6 +265,14 @@ public class hhController : MonoBehaviour
         speed -=10/2;
 
         camVector.x -= 1; camVector.y-=5; camVector.z+=10;
+        diamonds.localScale -= Vector3.one *0.2f;
+        foreach(Transform child in diamonds)
+        {
+            if(child.localPosition.x<0){child.localPosition += Vector3.right;}
+            if(child.localPosition.x>0){child.localPosition -= Vector3.right;}
+            
+        }
+         Invoke("ScaleCalibration",1.2f);
     }
 
     void LateUpdate()
@@ -377,8 +410,10 @@ public void wOutRotation(){rotateActive = false; TestVertical._vActive = false; 
 
 public void EatTexter(int count)
 {
-    float randomPos = Random.Range(-2,2);
-   Transform textTemp =  Instantiate(text,new Vector3(randomPos,textHeight,parent.position.z),Quaternion.identity,parent);
+    float randomPos = Random.Range(-1f*(EdibleManager.Instance.scaleCount-1),1f*(EdibleManager.Instance.scaleCount-1));
+   Transform textTemp =  Instantiate(text,new Vector3(transform.localPosition.x,textHeight,parent.position.z),Quaternion.identity,rotationP_reset);
+   textTemp.localPosition = texter.localPosition;
+   
     /*hhController.Instance.texts.GetChild
     (hhController.Instance.textCount%3).gameObject.SetActive(true);
 
@@ -388,9 +423,19 @@ public void EatTexter(int count)
     text.transform.DOMoveY(5,1f,false);
     text.transform.DOScale(1.25f,1f);
     StartCoroutine(TurnOffText(pos));*/
-    textTemp.GetComponent<TextMeshPro>().text = "+"+count;
-    textTemp.transform.DOMoveY(textHeight+2,1f,false);
-    textTemp.transform.DOScale(1f,1f);
+    if(count<0)
+    {   
+         textTemp.GetComponent<TextMeshPro>().color = Color.red;
+        textTemp.GetComponent<TextMeshPro>().text =count.ToString();
+    }
+    else{
+         textTemp.GetComponent<TextMeshPro>().color = Color.green;
+        textTemp.GetComponent<TextMeshPro>().text = "+"+count;
+    }
+    
+    textTemp.GetComponent<TextMeshPro>().fontSize = 15;
+    textTemp.transform.DOLocalMoveY(texter.localPosition.y+1,1f,false);
+    textTemp.transform.DOScale(0f,1f);
     StartCoroutine(TurnOffText(textTemp));
     
     
@@ -425,8 +470,9 @@ IEnumerator Ending()
             enemy.GetChild(0).GetComponent<SphereCollider>().enabled = true;
 
             int a = Random.Range(25,51);
-            enemy.GetChild(0).GetComponent<Rigidbody>().AddForce(Vector3.right*a*(EdibleManager.Instance.scaleCount-1),ForceMode.Impulse);
             followEnemy = true;
+            enemy.GetChild(0).GetComponent<Rigidbody>().AddForce(Vector3.right*a*(EdibleManager.Instance.scaleCount-1),ForceMode.Impulse);
+            
 }
 
 
@@ -457,6 +503,18 @@ void FinalControl()
        
     }
 
+    if(heroHP ==2)
+    {
+        int tmp = Random.Range(1,3);
+        enemy.GetChild(0).gameObject.GetComponent<Animator>().SetTrigger("Hit"+tmp);
+        startTime = Time.time;
+        CameraShaker.Instance.ShakeOnce(2f,2f,1f,1f);
+        MMVibrationManager.Haptic(HapticTypes.Failure);
+        heroHP -= 2;
+        CanvasScript.Instance.heroDec = true;
+        anim.SetTrigger("BeatFail");
+        end = true;
+    }
     else if(float.Parse(sec) >=4f)
     {
         int tmp = Random.Range(1,3);
@@ -507,10 +565,24 @@ IEnumerator CanvasOpen()
 
 public void Fail()
 {
+    
     speed =0;
-    rotationPoint.DOScale(Vector3.zero,0.5f).SetEase(Ease.InExpo);
-    canvas.transform.GetChild(7).gameObject.SetActive(true);
+    //rotationPoint.DOScale(Vector3.zero,0.5f).SetEase(Ease.InExpo);
+    transform.GetChild(9).gameObject.SetActive(true);
+    anim.SetTrigger("BeatFail");
+    //canvas.transform.GetChild(7).gameObject.SetActive(true);
     
 }
-
+void ScaleCalibration()
+{   
+    Debug.Log("Calib Start");
+  if(EdibleManager.Instance.scaleCount-1 == 1){rotationPoint.localScale = Vector3.one;}
+   else if(EdibleManager.Instance.scaleCount-1 > 1){
+       if(rotationPoint.localScale.x < heroScales[EdibleManager.Instance.eatCount-1]+1 
+       || rotationPoint.localScale.x> heroScales[EdibleManager.Instance.eatCount-1]+1)
+    {
+        rotationPoint.localScale = Vector3.one* (heroScales[EdibleManager.Instance.eatCount-1]+1);
+        Debug.Log("Calib DONE");
+    }}
+}
 }

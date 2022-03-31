@@ -31,6 +31,8 @@ TagManager:
   - Bomb3
   - Bomb4
   - Bomb5
+  - Diamond
+  - Barrel
   layers:
   - Default
   - TransparentFX

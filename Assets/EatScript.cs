@@ -14,7 +14,7 @@ public class EatScript : StateMachineBehaviour
         if(hhController.Instance.edible !=null)
         {
             GameObject.Destroy(hhController.Instance.edible);
-           hhController.Instance.EatTexter(EatTrigger.lastEated);
+           //hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;
 
             
@@ -45,7 +45,7 @@ public class EatScript : StateMachineBehaviour
 
         }
 
-        if(EdibleManager.Instance.scaleCount-1 == 1 && EdibleManager.Instance.negativeCount == 5 )
+        if(EdibleManager.Instance.scaleCount-1 == 1 && EdibleManager.Instance.negativeCount >= 5 )
         {
             hhController.Instance.Fail();
         }

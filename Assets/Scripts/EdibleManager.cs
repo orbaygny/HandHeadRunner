@@ -89,6 +89,7 @@ public class EdibleManager : MonoBehaviour
         {
             obj.gameObject.SetActive(false);
              obj.localScale = temp;
+             obj.GetComponent<BoxCollider>().enabled = true;
         }
     }
 
@@ -109,7 +110,7 @@ public class EdibleManager : MonoBehaviour
                 for(int i = 0; i<locations.Count ;i++)
                 {
                     if(locations[i] != null)
-                    {
+                    {   locations[i].GetComponent<BoxCollider>().enabled = false;
                         Vector3 tempScale =  locations[i].localScale;
                     locations[i].DOScale(Vector3.zero,0.25f).SetEase(Ease.InFlash);
                 StartCoroutine(BackToScale(locations[i],tempScale));
@@ -155,7 +156,7 @@ public class EdibleManager : MonoBehaviour
             for(int i = 0; i<locations.Count ;i++)
                 {
                     if(locations[i] != null)
-                    {
+                    {locations[i].GetComponent<BoxCollider>().enabled = false;
                         Vector3 tempScale =  locations[i].localScale;
                     locations[i].DOScale(Vector3.zero,0.25f).SetEase(Ease.InFlash);
                 StartCoroutine(BackToScale(locations[i],tempScale));
@@ -189,7 +190,7 @@ public class EdibleManager : MonoBehaviour
             for(int i = 0; i<locations.Count ;i++)
                 {
                     if(locations[i] != null)
-                    {
+                    {locations[i].GetComponent<BoxCollider>().enabled = false;
                         Vector3 tempScale =  locations[i].localScale;
                     locations[i].DOScale(Vector3.zero,0.25f).SetEase(Ease.InFlash);
                 StartCoroutine(BackToScale(locations[i],tempScale));
@@ -223,7 +224,7 @@ public class EdibleManager : MonoBehaviour
             for(int i = 0; i<locations.Count ;i++)
                 {
                     if(locations[i] != null)
-                    {
+                    {locations[i].GetComponent<BoxCollider>().enabled = false;
                         Vector3 tempScale =  locations[i].localScale;
                     locations[i].DOScale(Vector3.zero,0.25f).SetEase(Ease.InFlash);
                 StartCoroutine(BackToScale(locations[i],tempScale));
@@ -241,7 +242,7 @@ public class EdibleManager : MonoBehaviour
             for(int i = 0; i<locations.Count ;i++)
                 {
                     if(locations[i] != null)
-                    {
+                    {locations[i].GetComponent<BoxCollider>().enabled = false;
                         Vector3 tempScale =  locations[i].localScale;
                     locations[i].DOScale(Vector3.zero,0.25f).SetEase(Ease.InFlash);
                 StartCoroutine(BackToScale(locations[i],tempScale));

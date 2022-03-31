@@ -6,7 +6,17 @@ ModelImporter:
   - first:
       74: -623603649343465320
     second: Scene
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BlackEye
+    second: {fileID: 2800000, guid: c20bbbb43f7389b41b822c812b3ce7f2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: HeadBump
+    second: {fileID: 2800000, guid: a3a2e421e752bee4c84d345c109accf3, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
