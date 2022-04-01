@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5088535766369658104}
   - component: {fileID: 5088535766369658106}
   - component: {fileID: 5088535766369658107}
+  - component: {fileID: 4986325591901480192}
   m_Layer: 0
   m_Name: EatingText
   m_TagString: Untagged
@@ -172,3 +173,24 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 5088535766369658106}
   m_maskType: 0
+--- !u!114 &4986325591901480192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5088535766369658105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002595e91f609a246845cbf8a32fd288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styledBanner: 0
+  messageNoRenderer: 0
+  messageMultiMaterials: 0
+  messageNoMaterial: 0
+  messageTransparencySupport: 1
+  categoryMaterial: 0
+  customFogMaterial: {fileID: 0}
+  messageInvalidFogMaterial: 0
+  styledSpace0: 0
