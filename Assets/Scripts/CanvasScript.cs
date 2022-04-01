@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class CanvasScript : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class CanvasScript : MonoBehaviour
 
     public bool heroDec = false;
     public bool enmyDec = false;
+    public RectTransform damageText;
+
+   public RectTransform heroDamageText_Point;
+  public  RectTransform enemyDamageText_Point;
     void Awake()
     {
         Instance = this;
@@ -70,11 +75,28 @@ public void BarIncrease()
 
 public void HeroGetDamage()
 {
-    heroHpSlider.value = Mathf.Lerp(heroHpSlider.value,hhController.Instance.heroHP,5*Time.deltaTime);
+    RectTransform tmp=  Instantiate(damageText,heroDamageText_Point.anchoredPosition,Quaternion.identity,transform.GetChild(6).GetChild(0));
+    tmp.anchoredPosition =heroDamageText_Point.anchoredPosition;
+    tmp.DOAnchorPosY(tmp.anchoredPosition.y+200,1);
+    tmp.DOScale(1.2f,1);
+    StartCoroutine(DestroyText(tmp));
+
+   
 }
 
 public void EnemyGetDamage()
 {
-    enemyHpSlider.value = Mathf.Lerp(enemyHpSlider.value,hhController.Instance.enemyHP,5*Time.deltaTime);
+    RectTransform tmp=  Instantiate(damageText,enemyDamageText_Point.anchoredPosition,Quaternion.identity,transform.GetChild(6).GetChild(1));
+    tmp.anchoredPosition =enemyDamageText_Point.anchoredPosition;
+   tmp.DOAnchorPosY(tmp.anchoredPosition.y+200,1);
+   tmp.DOScale(1.2f,1);
+   StartCoroutine(DestroyText(tmp));
+
+}
+
+IEnumerator DestroyText(RectTransform tmp){
+    yield return new WaitForSeconds(1f);
+    tmp.gameObject.SetActive(false);
+    
 }
 }

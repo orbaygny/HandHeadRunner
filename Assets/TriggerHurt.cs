@@ -9,24 +9,29 @@ public class TriggerHurt : StateMachineBehaviour
     {
         if(animator.gameObject.tag == "Hero"){
              if(stateInfo.IsName("Hit1")){
-            hhController.Instance.enemy.GetChild(0).GetComponent<Animator>().SetTrigger("Hurt1"); }
+            hhController.Instance.enemy.GetChild(0).GetComponent<Animator>().SetTrigger("Hurt1");
+            CanvasScript.Instance.EnemyGetDamage(); }
 
             if(stateInfo.IsName("Hit2")){
-            hhController.Instance.enemy.GetChild(0).GetComponent<Animator>().SetTrigger("Hurt2"); }
+            hhController.Instance.enemy.GetChild(0).GetComponent<Animator>().SetTrigger("Hurt2"); 
+            CanvasScript.Instance.EnemyGetDamage(); }
 
             if(stateInfo.IsName("FinalHit"))
             {
                 hhController.Instance.enemy.GetChild(0).GetComponent<Animator>().SetTrigger("FHurt"); 
+                CanvasScript.Instance.EnemyGetDamage(); 
             }
         }
 
         if(animator.gameObject.tag == "Evil")
         {
             if(stateInfo.IsName("Hit_1")){
-            hhController.Instance.anim.SetTrigger("Hurt1"); }
+            hhController.Instance.anim.SetTrigger("Hurt1"); 
+            CanvasScript.Instance.HeroGetDamage(); }
 
             if(stateInfo.IsName("Hit_2")){
-            hhController.Instance.anim.SetTrigger("Hurt2"); }
+            hhController.Instance.anim.SetTrigger("Hurt2"); 
+            CanvasScript.Instance.HeroGetDamage();}
          }
     }
 
