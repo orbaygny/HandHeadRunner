@@ -26,6 +26,8 @@ public class CanvasScript : MonoBehaviour
         enemyHpSlider   = transform.GetChild(6).GetChild(1).GetComponent<Slider>();
     }
 
+  
+
     // Update is called once per frame
     void Update()
     {

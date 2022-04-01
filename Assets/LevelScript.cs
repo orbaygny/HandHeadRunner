@@ -9,7 +9,7 @@ public class LevelScript : MonoBehaviour
     void Start()
     {
         GetComponent<TextMeshProUGUI>().text = "LEVEL "+
-        PlayerPrefs.GetInt("Level",1);
+        (PlayerPrefs.GetInt("level")+1);
     }
 
     // Update is called once per frame
