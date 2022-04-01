@@ -49,8 +49,7 @@ public class EdibleManager : MonoBehaviour
             placePoint.GetChild(8).gameObject.tag = "Plane";
             placePoint.GetChild(8).gameObject.layer = 6;
             placePoint.GetChild(8).localScale = Vector3.one*4f;
-            placePoint.GetChild(9).localScale = Vector3.one*1.5f;
-            
+            placePoint.GetChild(9).localScale = Vector3.one*1.5f;            
             // placePoint.DOLocalRotate(new Vector3(0, 180, 0), 1.5f, RotateMode.FastBeyond360).SetLoops(-1,LoopType.Incremental).SetEase(Ease.Linear);
         }
 

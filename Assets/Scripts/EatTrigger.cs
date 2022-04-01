@@ -71,7 +71,7 @@ public class EatTrigger : MonoBehaviour
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.12f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo); 
            CanvasScript.Instance.inc = true;}
-           hhController.Instance.EatTexter(EatTrigger.lastEated);
+           //hhController.Instance.EatTexter(EatTrigger.lastEated);
             MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             break;
 
@@ -90,7 +90,7 @@ public class EatTrigger : MonoBehaviour
             if(EdibleManager.Instance.eatCount == 10){hhController.Instance.anim.SetTrigger("Eat");}
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.5f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo);
-            hhController.Instance.EatTexter(EatTrigger.lastEated);
+            //hhController.Instance.EatTexter(EatTrigger.lastEated);
            CanvasScript.Instance.inc = true;}
             break;
 
@@ -112,7 +112,7 @@ public class EatTrigger : MonoBehaviour
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.5f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo);
            CanvasScript.Instance.inc = true;}
-           hhController.Instance.EatTexter(EatTrigger.lastEated);
+           //hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             break;
 
@@ -249,7 +249,7 @@ public class EatTrigger : MonoBehaviour
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.5f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo);
            CanvasScript.Instance.inc = true;}
-           hhController.Instance.EatTexter(EatTrigger.lastEated);
+           //hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             break;
 
@@ -271,7 +271,7 @@ public class EatTrigger : MonoBehaviour
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.5f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo);
            CanvasScript.Instance.inc = true;}
-           hhController.Instance.EatTexter(EatTrigger.lastEated);
+           //hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             break;
 
@@ -293,7 +293,7 @@ public class EatTrigger : MonoBehaviour
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale+scaler,0.5f).SetEase(Ease.OutBack).SetLoops(2,LoopType.Yoyo);
            CanvasScript.Instance.inc = true;}
-           hhController.Instance.EatTexter(EatTrigger.lastEated);
+           //hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             break;
 
@@ -317,7 +317,7 @@ public class EatTrigger : MonoBehaviour
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
            CanvasScript.Instance.inc = true;}
-           hhController.Instance.EatTexter(EatTrigger.lastEated);
+          // hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.Failure);
 
             break;
@@ -340,7 +340,7 @@ public class EatTrigger : MonoBehaviour
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
            CanvasScript.Instance.inc = true;}
-           hhController.Instance.EatTexter(EatTrigger.lastEated);
+           //hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
 
@@ -362,7 +362,7 @@ public class EatTrigger : MonoBehaviour
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
            CanvasScript.Instance.inc = true;}
-           hhController.Instance.EatTexter(EatTrigger.lastEated);
+           //hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
 
@@ -384,7 +384,7 @@ public class EatTrigger : MonoBehaviour
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
            CanvasScript.Instance.inc = true;}
-           hhController.Instance.EatTexter(EatTrigger.lastEated);
+           //hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
 
@@ -406,7 +406,7 @@ public class EatTrigger : MonoBehaviour
             else{GameObject.Destroy(hhController.Instance.edible);
              hhController.Instance.rotationPoint.DOScale(hhController.Instance.rotationPoint.lossyScale-scaler,0.12f).SetEase(Ease.InBack).SetLoops(2,LoopType.Yoyo);
            CanvasScript.Instance.inc = true;}
-           hhController.Instance.EatTexter(EatTrigger.lastEated);
+           //hhController.Instance.EatTexter(EatTrigger.lastEated);
            MMVibrationManager.Haptic(HapticTypes.Failure);
             break;
 
