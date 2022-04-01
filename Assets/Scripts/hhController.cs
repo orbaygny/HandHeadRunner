@@ -490,6 +490,7 @@ void FinalControl()
             anim.SetTrigger("Hit");
             MMVibrationManager.Haptic(HapticTypes.Failure);
             Camera.main.gameObject.GetComponent<CameraShaker>().enabled=false;
+            end = true;
             StartCoroutine(Ending());
            
         }
