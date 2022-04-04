@@ -102,7 +102,7 @@ public class HeightFogGlobal : StyledMonoBehaviour
     {
         gameObject.name = "Height Fog Global";
 
-        gameObject.transform.position = Vector3.zero;
+      //  gameObject.transform.position = Vector3.zero;
         gameObject.transform.rotation = Quaternion.identity;
 
         GetCamera();

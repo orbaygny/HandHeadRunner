@@ -99,6 +99,7 @@ public class hhController : MonoBehaviour
 
     public Transform diamonds;
     public Transform acidBarrel;
+    public HeightFogGlobal heightFogGlobal;
     //bool resetPos = false;
      void Awake() { Instance = this; }
     
@@ -477,8 +478,10 @@ IEnumerator Ending()
 
 
 void FinalControl()
-{   
-    if(fight){if(timerSet){startTime = Time.time; timerSet =false;}
+{
+        heightFogGlobal.fogHeightStart = -150;
+
+        if (fight){if(timerSet){startTime = Time.time; timerSet =false;}
     float t = Time.time-startTime;
        // string min =((int)t/60).ToString();
         string sec = (t%60).ToString("f1");
