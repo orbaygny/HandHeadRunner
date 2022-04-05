@@ -502,7 +502,7 @@ public class EatTrigger : MonoBehaviour
              parentForDelete = other.transform.parent.gameObject;
             other.transform.parent = placeHolder;
             other.transform.localPosition = new Vector3(-0.3f,-0.15f,0.12f);
-            other.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
+            other.transform.localScale = new Vector3(0.25f,0.25f,0.25f);
             hhController.Instance.edible = other.gameObject;
             EdibleManager.Instance.locations.Remove(hhController.Instance.edible.transform);
             EdibleManager.Instance.eatCount -= 10;
